@@ -1,0 +1,1827 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://wechaty.js.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wechaty.js.org/" rel="alternate" type="text/html" /><updated>2021-01-20T17:12:11+00:00</updated><id>https://wechaty.js.org/feed.xml</id><title type="html">Wechaty</title><subtitle>RPA SDK for Chatbot Makers</subtitle><entry><title type="html">Huan: 介绍对话机器人（Chatbot）与对话式用户交互界面（CUI）</title><link href="https://wechaty.js.org/2021/01/20/chatbot-conversational-user-interface/" rel="alternate" type="text/html" title="Huan: 介绍对话机器人（Chatbot）与对话式用户交互界面（CUI）" /><published>2021-01-20T00:00:00+00:00</published><updated>2021-01-20T00:00:00+00:00</updated><id>https://wechaty.js.org/2021/01/20/chatbot-conversational-user-interface</id><content type="html" xml:base="https://wechaty.js.org/2021/01/20/chatbot-conversational-user-interface/">&lt;p&gt;Wechaty 是一个为对话式用户交互界面提供接口服务的 SDK，通过 RPA 技术，为 Chatbot 开发者提供便利的即时通讯平台接入服务，打造更加优秀的 Conversational AI 对话机器人。&lt;/p&gt;
+
+&lt;p&gt;为什么我们要做 Chatbot ，我们经常提起的 Chatbot 等名词究竟是什么，它们有哪些优势？本文希望可以简明扼要的介绍清楚：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;什么是对话机器人（Chatbot）&lt;/li&gt;
+  &lt;li&gt;什么是对话式用户交互界面（Conversational User Interface, CUI）&lt;/li&gt;
+  &lt;li&gt;Chatbot 能做什么&lt;/li&gt;
+  &lt;li&gt;什么是 Conversational AI (CAI)&lt;/li&gt;
+  &lt;li&gt;CUI 与即时通讯平台（Instant Messaging, IM）&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;什么是对话机器人chatbot&quot;&gt;什么是对话机器人（Chatbot）&lt;/h2&gt;
+
+&lt;p&gt;Chatbot 是一个有能力与用户通过自然语言进行交谈的软件。&lt;/p&gt;
+
+&lt;p&gt;一般 Chatbot 都会运行在现有的即时消息软件平台上，比如 Slack、微信、钉钉。它也可以直接嵌入在独立网站或者移动手机 APP 中。&lt;/p&gt;
+
+&lt;h2 id=&quot;什么是对话式用户交互界面conversational-user-interface-cui&quot;&gt;什么是对话式用户交互界面（Conversational User Interface, CUI）&lt;/h2&gt;
+
+&lt;p&gt;对话式用户交互界面（Conversational User Interface, CUI）与以前使用按钮、输入框和滚动条的图形界面（Graphical User Interface, GUI）类似，但是 CUI 是通过模拟人类说话来与用户进行交互。&lt;/p&gt;
+
+&lt;p&gt;比如，网站是图形界面，也就是说主要的用户界面是按钮，图片，滚动条等。与之对比，Chatbot 是一个对话界面，它的主要用户界面是用户和软件之间的对话。&lt;/p&gt;
+
+&lt;p&gt;现在 CUI 非常常见，你很可能已经使用过CUI了。比如如果你用 iPhone，那么应该接触过 Siri；如果你经常在线购物，那么你应该在淘宝上被小二机器人服务过。&lt;/p&gt;
+
+&lt;p&gt;所有的这些服务都是基于对话为中心进行设计的。设计对话的目标是让人与计算机之间的协作变得简单。区别于使用传统的计算机语言，对话机器人能够让用户通过与计算机进行像与其他人一样的“交谈”来完成任务。&lt;/p&gt;
+
+&lt;h2 id=&quot;chatbot-能做什么&quot;&gt;Chatbot 能做什么&lt;/h2&gt;
+
+&lt;p&gt;Chatbot 能够应用在很多日常任务中。比如查天气，完成在线的订单；可以推广和销售产品、提升用户活跃度；也可以帮助你为客户提供实时的问题回答，提升用户体验等。&lt;/p&gt;
+
+&lt;p&gt;对话机器人可以降低人员成本，提升客户服务质量。和人工坐席相比，它最大的优势是可以永远实时回复，并且可以同时回复很多人。&lt;/p&gt;
+
+&lt;p&gt;开发者可以 Chatbot 开发公司现有员工岗位的能力。想象一下 Chatbot 作为团队一员，能够每天24小时，每周7天不间断的工作，还不用领工资；它还可以被打造成为一个全面手，同时作为销售员、市场专员、客户服务坐席，一人独挡一面，为客户提供一站式全方位的支持。&lt;/p&gt;
+
+&lt;h2 id=&quot;什么是-conversational-ai-cai&quot;&gt;什么是 Conversational AI (CAI)&lt;/h2&gt;
+
+&lt;p&gt;对话式交互是计算机从文本命令到图形界面之后，随着人工智能能力的不断增强，计算机软件系统下一代的人机交互界面。为对话式用户交互界面提供的 AI 能力，就是 Conversational AI (CAI)。&lt;/p&gt;
+
+&lt;p&gt;人工智能的发展是近些年来对话机器人能够越来越强大的基础原动力。近些年的世界变化表明，这些智能技术它们所不断学习和进步的速度，远远超越了我们人类。&lt;/p&gt;
+
+&lt;h2 id=&quot;cui-与即时通讯平台instant-messaging-im&quot;&gt;CUI 与即时通讯平台（Instant Messaging, IM）&lt;/h2&gt;
+
+&lt;p&gt;对话式用户交互界面(CUI)也需要适配各种平台，就像现有的响应式网页设计（Responsive Web Design）界面需要适配不同的屏幕分辨率和兼容电脑鼠标和手机触屏一样。&lt;/p&gt;
+
+&lt;p&gt;CUI 基于不同的平台，你的 Chatbot 需要适应不同平台之间的不同特点。换言之，你需要确保你的用户在不同的设备和平台上访问你的对话机器人时，能够得到一致的体验。目前，最流行的对话平台包括：微信、Whatsapp、Slack、钉钉、飞书等。&lt;/p&gt;
+
+&lt;h2 id=&quot;写在最后&quot;&gt;写在最后&lt;/h2&gt;
+
+&lt;p&gt;Chatbot 是一个蕴含着巨大机会的新领域。今天的 Chatbot，就好像是 1996 年的网页。&lt;/p&gt;
+
+&lt;p&gt;Google，Microsoft，Facebook，Amazon，和 Apple 这些大公司已经发现了 CUI 可以作为未来拓展用户的重要途径。这种基于自然语言的 Chatbot 可能很快替代大量的 APPs ，使用户可以直接通过语言来和他们喜欢的数字服务进行交互。理解对话式用户交互界面（CUI）是理解未来科技发展的重要一步。&lt;/p&gt;
+
+&lt;p&gt;Chatbot 现在不断在迭代升级，对各种商业场景的未来都会产生巨大影响。你绝不应该错过这个绝佳的机会，今天就尽快建立一个属于你自己的 Chatbot 并通过它实现与你的客户的自然语言沟通，提升用户体验把！&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Teaser image credit: &lt;a href=&quot;https://learn.g2.com/chatbot&quot;&gt;What Is a Chatbot? The Full Guide to Chatbots in 2020&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>huan</name></author><category term="tutorial" /><category term="news" /><category term="chatbot" /><category term="cui" /><category term="conversational-user-interface" /><summary type="html">Wechaty 是一个为对话式用户交互界面提供接口服务的 SDK，通过 RPA 技术，为 Chatbot 开发者提供便利的即时通讯平台接入服务，打造更加优秀的 Conversational AI 对话机器人。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://wechaty.js.org/assets/2021/01-chatbot-conversational-user-interface/chatbot.webp" /><media:content medium="image" url="https://wechaty.js.org/assets/2021/01-chatbot-conversational-user-interface/chatbot.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Wechaty restful api</title><link href="https://wechaty.js.org/2021/01/19/wechaty-api-1/" rel="alternate" type="text/html" title="Wechaty restful api" /><published>2021-01-19T00:00:00+00:00</published><updated>2021-01-19T00:00:00+00:00</updated><id>https://wechaty.js.org/2021/01/19/wechaty-api-1</id><content type="html" xml:base="https://wechaty.js.org/2021/01/19/wechaty-api-1/">&lt;h2 id=&quot;wechaty-restful-api&quot;&gt;wechaty restful api&lt;/h2&gt;
+
+&lt;p&gt;This article will explain why I started to use wechaty, made the restful api wrapping the bot and what I would do as the next step.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-why-i-started-to-use-wechaty&quot;&gt;1. Why I started to use wechaty&lt;/h2&gt;
+
+&lt;p&gt;wechat individual bot has been decommissioned since 2019. The wechat web reject the login using QRCode. To continue to use the bot, I tried a lot of ways and finally find the alternative — wechaty(The solution wechat enterprise provided )
+&lt;a href=&quot;wechaty doc&quot;&gt;https://wechaty.js.org/docs/api/message&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2-how-to-use-wechaty-for-bot&quot;&gt;2. How to use wechaty for bot&lt;/h2&gt;
+
+&lt;p&gt;There are only three steps to make one simplest bot.&lt;/p&gt;
+
+&lt;h3 id=&quot;21-install-enterprise-wechat-in-the-smart-phone&quot;&gt;2.1 Install enterprise wechat in the smart phone&lt;/h3&gt;
+
+&lt;h3 id=&quot;22-apply-one-15-days-trial-token-from-wechaty&quot;&gt;2.2 Apply one 15-days trial token from wechaty&lt;/h3&gt;
+
+&lt;p&gt;Please refer to this page to get the token &lt;a href=&quot;wechaty&quot;&gt;https://github.com/wechaty/wechaty&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;23-write-the-test-code-as-below&quot;&gt;2.3 Write the test code as below&lt;/h3&gt;
+
+&lt;p&gt;Now you can send first message through bot to one account or group.
+Please refer to the repository &lt;a href=&quot;wechaty api&quot;&gt;https://github.com/luyomo/wechaty-api&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3-prepare-restful-api-for-wechaty-robot&quot;&gt;3. Prepare restful api for wechaty robot&lt;/h2&gt;
+
+&lt;p&gt;Because I am not so familiar with the nodejs and want to use other languages to implement all kinds of services, I decided to make one API service to wrap the robot.
+I chose the Koa2 as the api module to publish bot and implemented the below APIs.&lt;/p&gt;
+
+&lt;h3 id=&quot;31-publish-mode&quot;&gt;3.1 Publish mode&lt;/h3&gt;
+
+&lt;h4 id=&quot;311-send-chat-to-human&quot;&gt;3.1.1 send chat to human&lt;/h4&gt;
+
+&lt;p&gt;curl -X POST -H ‘Content-Type: application/json’ [Context: “http://127.0.0.1:3000/contact/contactName”] — data ‘{“data”:”Hello world. I am bot”}’&lt;/p&gt;
+
+&lt;h4 id=&quot;312-send-chat-to-room&quot;&gt;3.1.2 send chat to room&lt;/h4&gt;
+
+&lt;p&gt;curl -X POST -H ‘Content-Type: application/json’ [Context: “http://127.0.0.1:3000/room/roomName”] — data ‘{“data”:”Hello world. I am bot”}’&lt;/p&gt;
+
+&lt;h4 id=&quot;313-send-chat-to-groupmap-the-chinese-to-english-group-name&quot;&gt;3.1.3 send chat to group(map the chinese to english group name)&lt;/h4&gt;
+
+&lt;p&gt;curl -X POST -H ‘Content-Type: application/json’ [Context: “http://127.0.0.1:3000/group/groupName”] — data ‘{“data”:”Hello world. I am bot”}’&lt;/p&gt;
+
+&lt;p&gt;The reason I added this group because the curl does not support the Chinese language. So use the maps to resolve it.&lt;/p&gt;
+
+&lt;h3 id=&quot;32-interactive-mode&quot;&gt;3.2 interactive mode&lt;/h3&gt;
+
+&lt;p&gt;Last is to make bot to reply: Now only prepare the ping to show whether the bot service is active or not.&lt;/p&gt;
+
+&lt;h2 id=&quot;4-first-service--temperature-forecast&quot;&gt;4 First service — Temperature forecast&lt;/h2&gt;
+
+&lt;p&gt;Extract the temperature info from api.openweathermap.org and send to my wechat regularly. This only saved my time to browse the web every morning.&lt;/p&gt;
+
+&lt;h2 id=&quot;5-next-to-do&quot;&gt;5. Next to do&lt;/h2&gt;
+
+&lt;h3 id=&quot;51-redirect-the-line-message-to-wechat&quot;&gt;5.1 Redirect the line message to wechat&lt;/h3&gt;
+
+&lt;p&gt;This is my wife’s request. She always missed important messages from line since she use wechat mostly. She wants the bot to help her.&lt;/p&gt;
+
+&lt;h3 id=&quot;52-use-gmail-api-to-send-message-if-the-email-meets-some-conditionsfrom-or-subject&quot;&gt;5.2 Use gmail api to send message if the email meets some conditions.(From or Subject)&lt;/h3&gt;</content><author><name>luyomo</name></author><category term="project" /><category term="nodejs" /><category term="code" /><category term="restful" /><summary type="html">wechaty restful api</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://wechaty.js.org/assets/2021/01-wechaty-api-1/luyomo.png" /><media:content medium="image" url="https://wechaty.js.org/assets/2021/01-wechaty-api-1/luyomo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">基于wechaty的拼车小程序（1）</title><link href="https://wechaty.js.org/2021/01/15/carpool-bot-with-wechaty-1/" rel="alternate" type="text/html" title="基于wechaty的拼车小程序（1）" /><published>2021-01-15T00:00:00+00:00</published><updated>2021-01-15T00:00:00+00:00</updated><id>https://wechaty.js.org/2021/01/15/carpool-bot-with-wechaty-1</id><content type="html" xml:base="https://wechaty.js.org/2021/01/15/carpool-bot-with-wechaty-1/">&lt;blockquote&gt;
+  &lt;p&gt;作者: &lt;a href=&quot;https://github.com/jellyZhang&quot;&gt;Jelly&lt;/a&gt;
+Code: &lt;a href=&quot;https://github.com/JellyZhang/rw-helper-back&quot;&gt;Github&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;基于wechaty的拼车小程序1&quot;&gt;基于wechaty的拼车小程序（1）&lt;/h2&gt;
+
+&lt;h3 id=&quot;产品构想&quot;&gt;产品构想&lt;/h3&gt;
+
+&lt;p&gt;我的初步想法是：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;微信小程序为前端，用户可以在小程序上浏览其他用户发布的拼车信息（出发地、到达地、时间等等）&lt;/li&gt;
+  &lt;li&gt;在用户通过小程序发起「加入拼车」的请求后，我们需要做的事情概括起来就是：将「发起者」与「参与者」联系到一起&lt;/li&gt;
+  &lt;li&gt;实现「发起者」与「参与者」联系到一起有许多方式：
+    &lt;ul&gt;
+      &lt;li&gt;将发起拼车的用户的WechatId发送给新用户&lt;/li&gt;
+      &lt;li&gt;将两个用户拉到一个群聊里&lt;/li&gt;
+      &lt;li&gt;做一个留言系统或者IM系统让两个用户进行对话&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;综合考虑来看，将多个用户拉到一个群聊里将是最简洁的方案
+    &lt;ul&gt;
+      &lt;li&gt;群聊即用即删，用户可以随时退出群聊，避免骚扰。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;而微信小程序因为微信本身的政策原因，是不允许「发布二维码」、「拉入群聊」等操作的，因此需要WechatBot来助一臂之力。
+    &lt;ul&gt;
+      &lt;li&gt;PS：目前市面现有的拼车小程序基于公众号来实现，需要用户关注指定公众号并发送暗号获得入群链接，同时他们以此盈利。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;如何使用wechaty来构造bot&quot;&gt;如何使用wechaty来构造bot&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;对需求进行拆解，初步阶段的需求大概如下：&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;当「发起人」发起一个拼车时，Bot能与「发起人」创建一个群聊，并将「拼车信息」与「群聊ID」进行持久化存储。&lt;/li&gt;
+      &lt;li&gt;当「参与人」参与拼车时，Bot能将「参与人」根据「群聊ID」拉入同一个群聊。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;大致使用到的wechaty API如下：&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;contact.find&lt;/code&gt;通过wechatId查找用户&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;room.create&lt;/code&gt;创建群聊&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;room.invite&lt;/code&gt;拉人进群&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Bot部分代码如下：&lt;/p&gt;
+
+    &lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CreateRoomById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;topic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Room&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contact&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Contact&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;contact&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`cant find user by id, id=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;helper_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;helper&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Contact&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;helper&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`cant find user by id, id=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contactList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;contact&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;helper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;room&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Room&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;contactList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;topic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;createDingRoom() new ding room created: &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;InviteToRoom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;userId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;roomId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contact&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Contact&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;userId&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;contact&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`cant find user by id, id=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;userId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;room&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Room&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;roomId&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;room&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`cant find room by id, id=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;roomId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;contact&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;使用express框架来搭建简易web服务器，对外提供借口&lt;/p&gt;
+
+    &lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Application&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// create room by userId&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/room/create&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;topic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;topic&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;resp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;any&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;room&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;CreateRoomById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;topic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;resp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Resp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR_CODE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ERROR_MSG&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;resp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// invite someone to a room&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/room/invite&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;userId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;userId&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;roomId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;roomId&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;room&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;InviteToRoom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;userId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;roomId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Resp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR_CODE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ERROR_MSG&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;后端服务&quot;&gt;后端服务&lt;/h3&gt;
+
+&lt;p&gt;另外需要一个后端服务，主要支持以下功能：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;接受前端（小程序端）发送的用户请求。&lt;/li&gt;
+  &lt;li&gt;将Bot处理好的「拼车信息」、「群聊ID」绑定在一起，存储到数据库里。&lt;/li&gt;
+  &lt;li&gt;向前端（小程序端）返回全部的拼车信息，供用户选择。&lt;/li&gt;
+  &lt;li&gt;将用户填写的wechatId与小程序的openId进行绑定，存储到数据库，使用户不必每次都填写。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;开发截图&quot;&gt;开发截图&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;小程序前端开发尚未完成，比较粗糙。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;用户填写WechatId的界面。（因小程序不提供用户wechatId，需要用户手动填写）&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/2021/01-carpool-bot-with-wechaty-1/2.jpg&quot; alt=&quot;Pic-1&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;用户发布拼车与加入拼车的界面：&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/2021/01-carpool-bot-with-wechaty-1/1.jpg&quot; alt=&quot;Pic-1&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;用户进行「加入群聊」后，Bot将用户拉入群聊（bot视角）：&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/2021/01-carpool-bot-with-wechaty-1/3.jpg&quot; alt=&quot;Pic-1&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;项目相关&quot;&gt;项目相关&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;项目代码文件放在：&lt;a href=&quot;https://github.com/JellyZhang/rw-helper-back/tree/master/wechat-bot&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;后续的TODO：&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;完善小程序前端。&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;支持进度条显示「当前时间」距离「结束拼车时间」的长短&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;拼车信息支持显示「人数」与「总人数」&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;添加Bot在群内可供用户进行交互的操作&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;/close  结束拼车&lt;/li&gt;
+          &lt;li&gt;/update  刷新群聊人数&lt;/li&gt;
+          &lt;li&gt;……etc&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;支持当用户发起「加入」时却未添加Bot未好友时，Bot能主动发起「好友请求」&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jellyzhang</name></author><category term="project" /><category term="nodejs" /><category term="code" /><summary type="html">作者: Jelly Code: Github</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://wechaty.js.org/assets/2021/01-carpool-bot-with-wechaty-1/4.jpeg" /><media:content medium="image" url="https://wechaty.js.org/assets/2021/01-carpool-bot-with-wechaty-1/4.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Wechaty Puppet Service (Providers)</title><link href="https://wechaty.js.org/2021/01/14/wechaty-puppet-service/" rel="alternate" type="text/html" title="Introducing Wechaty Puppet Service (Providers)" /><published>2021-01-14T00:00:00+00:00</published><updated>2021-01-14T00:00:00+00:00</updated><id>https://wechaty.js.org/2021/01/14/wechaty-puppet-service</id><content type="html" xml:base="https://wechaty.js.org/2021/01/14/wechaty-puppet-service/">&lt;p&gt;Wechaty is an SDK for chatbot makers. It uses &lt;a href=&quot;https://en.wikipedia.org/wiki/Robotic_process_automation&quot;&gt;Robotic Progress Automation (RPA)&lt;/a&gt; technology to help developers to be more productive for building &lt;a href=&quot;https://en.wikipedia.org/wiki/Conversational_user_interface&quot;&gt;Conversational User Interface (CUI)&lt;/a&gt;, which we call it a &lt;a href=&quot;https://en.wikipedia.org/wiki/Chatbot&quot;&gt;Chatbot&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;wechaty-puppet&quot;&gt;Wechaty Puppet&lt;/h2&gt;
+
+&lt;p&gt;For different instant messaging (IM) systems (such as WeChat, Whatsapp, and TikTok), the Wechaty community builds separate RPA modules for each, and we call those modules &lt;a href=&quot;https://github.com/wechaty/wechaty-puppet&quot;&gt;Wechaty Puppet&lt;/a&gt;. &lt;em&gt;Wechaty Puppet&lt;/em&gt; is the core concept in the Wechaty ecosystem, which is in charge of connecting the Wechaty API to the underlying IM Platform bot account.&lt;/p&gt;
+
+&lt;h2 id=&quot;wechaty-puppet-abstract&quot;&gt;Wechaty Puppet Abstract&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Wechaty Puppet&lt;/em&gt; is a standard for maintaining compatibility between IM systems. &lt;em&gt;Wechaty Puppet&lt;/em&gt; defines the universal IM interface for compatibility with Wechaty API to variants of IM systems.&lt;/p&gt;
+
+&lt;h2 id=&quot;wechaty-puppet-provider&quot;&gt;Wechaty Puppet Provider&lt;/h2&gt;
+
+&lt;p&gt;Different IM systems need different Wechaty Puppets, and they have different names and all implementing the Wechaty Puppet API, we call them the &lt;strong&gt;Wechaty Puppet Provider&lt;/strong&gt;. For example, the Wechaty Puppet Provider who is supporting WeChat is named &lt;a href=&quot;https://github.com/wechaty/wechaty-puppet-puppeteer&quot;&gt;wechaty-puppet-puppeteer&lt;/a&gt;, supporting Whatsapp is named &lt;a href=&quot;https://github.com/wechaty/wechaty-puppet-whatsapp&quot;&gt;wechaty-puppet-whatsapp&lt;/a&gt;, and supporting Lark is named &lt;a href=&quot;https://github.com/wechaty/wechaty-puppet-lark&quot;&gt;wechaty-puppet-lark&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;When we published Wechaty in May 2016, we were using WebDriver/Puppeteer(&lt;a href=&quot;https://github.com/wechaty/wechaty-puppet-puppeteer&quot;&gt;wechaty-puppet-puppeteer&lt;/a&gt;) and &lt;a href=&quot;https://github.com/wechaty/wechaty-puppet-wechat4u&quot;&gt;wechaty-puppet-wechat4u&lt;/a&gt; to hook to the Web WeChat code. Still, later the &lt;a href=&quot;https://github.com/wechaty/wechaty/issues/603&quot;&gt;Web Protocol has been deprecated&lt;/a&gt;, and we have to find other ways to get the job done.&lt;/p&gt;
+
+&lt;p&gt;Beyonds the Web Protocol, the community have tried many technologies in the past years, such as:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Windows Hook
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/juzibot/wxwork-tester&quot;&gt;WxWork&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/juzibot/donut-tester&quot;&gt;Donut&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Pad Protocol
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/padlocal/wechaty-puppet-padlocal&quot;&gt;PadLocal&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/wechaty-puppet-padchat&quot;&gt;PadChat (deprecated)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/wechaty-puppet-padpro&quot;&gt;PadPro (deprecated)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/wechaty-puppet-padplus&quot;&gt;PadPlus (deprecated)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mac Hook
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/wechaty-puppet-macOS&quot;&gt;macOS (under construction)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/juzibot/wechaty-puppet-macpro&quot;&gt;MacPro (deprecated)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;App Hook: &lt;a href=&quot;https://github.com/juzibot/wechaty-puppet-iosbird&quot;&gt;IosBird (deprecated)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;To learn about all Wechaty Puppet Providers, you can go to our &lt;a href=&quot;https://github.com/wechaty/wechaty-puppet/wiki/Directory&quot;&gt;Wechaty Puppet Directory&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;using-wechaty-puppet-providers&quot;&gt;Using Wechaty Puppet Providers&lt;/h2&gt;
+
+&lt;p&gt;Let’s see a code example (in TypeScript) of how to change Wechaty Puppet Providers.&lt;/p&gt;
+
+&lt;p&gt;We have the following six lines code, which is the world’s shortest chatbot:&lt;/p&gt;
+
+&lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// bot.ts&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Wechaty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;wechaty&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;Wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Global Instance&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;scan&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;qrcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`Scan QR Code to login: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;\nhttps://wechaty.js.org/qrcode/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;encodeURIComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;qrcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;login&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;            &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`User &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; logged in`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;       &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`Message: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The above code will use the default Wechaty Puppet Provider (which is &lt;a href=&quot;https://github.com/wechaty/wechaty-puppet-puppeteer&quot;&gt;wechaty-puppet-puppeteer&lt;/a&gt;) because we have not specified manually.&lt;/p&gt;
+
+&lt;p&gt;If we want this bot to serve on Whatsapp, we need to specify a Wechaty Puppet Provider for Whatsapp.&lt;/p&gt;
+
+&lt;p&gt;We have two methods to specify Wechaty Puppet Providers for our program:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WECHATY_PUPPET&lt;/code&gt; environment variable&lt;/li&gt;
+  &lt;li&gt;Import the Wechaty Puppet manually in code&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;1-using-the-wechaty_puppet-environment-variable&quot;&gt;1. Using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WECHATY_PUPPET&lt;/code&gt; environment variable&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WECHATY_PUPPET&lt;/code&gt; environment will be used as the Wechaty Puppet Provider NPM name, and then you are all set.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;WECHATY_PUPPET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;wechaty-puppet-whatsapp
+node &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; ts-node/register bot.ts
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The above shell commands set the &lt;a href=&quot;https://github.com/wechaty/wechaty-puppet-whatsapp&quot;&gt;wechaty-puppet-whatsapp&lt;/a&gt; to the environment variable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WECHATY_PUPPET&lt;/code&gt; and our Wechaty system will use it.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-import-the-wechaty-puppet-manually-in-code&quot;&gt;2. Import the Wechaty Puppet manually in code&lt;/h3&gt;
+
+&lt;p&gt;On the other hand, you can import the Wechaty Puppet Provider NPM module directly in your code and then add an option when instantiating the Wechaty with the object name &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-diff highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; bot.ts
+&lt;span class=&quot;p&quot;&gt;import { Wechaty } from 'wechaty'
+&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+ import { PuppetWhatsapp } from 'wechaty-puppet-whatsapp'
+&lt;/span&gt;
+- Wechaty.instance() // Global Instance
+&lt;span class=&quot;gi&quot;&gt;+ Wechaty.instance({ puppet: new PuppetWhatsapp() })
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.on('scan',&lt;/span&gt; (qrcode, status) =&amp;gt; console.log(`Scan QR Code to login: ${status}\nhttps://wechaty.js.org/qrcode/${encodeURIComponent(qrcode)}`))
+&lt;span class=&quot;err&quot;&gt;.on('login',&lt;/span&gt;            user =&amp;gt; console.log(`User ${user} logged in`))
+&lt;span class=&quot;err&quot;&gt;.on('message',&lt;/span&gt;       message =&amp;gt; console.log(`Message: ${message}`))
+&lt;span class=&quot;err&quot;&gt;.start()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The above code can be self-explained: the Wechaty will use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PuppetWhatsapp&lt;/code&gt; from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wechaty-puppet-whatsapp&lt;/code&gt; module.&lt;/p&gt;
+
+&lt;h2 id=&quot;build-polyglotmulti-language-wechaty-with-the-typescript-ecosystem&quot;&gt;Build Polyglot(Multi-language) Wechaty with the TypeScript Ecosystem&lt;/h2&gt;
+
+&lt;p&gt;Wechaty, Wechaty Puppet, and Wechaty Puppet Providers are all written in TypeScript (before 2020). We are pleased with TypeScript because it’s robust, scalable, and portable.&lt;/p&gt;
+
+&lt;p&gt;In 2020, we started to build Wechaty in many other languages, like Python, Go, Java, PHP, .NET, Scala, etc. Wechaty community started to translate Wechaty from TypeScript to those languages (&lt;a href=&quot;https://github.com/wechaty/wechaty/discussions/1927&quot;&gt;Issue #1927&lt;/a&gt;), and the plan was going very smoothly. Polyglot Wechaty has been published, and almost all developers from all programming languages are happy with Wechaty by developing using their favorite language now.&lt;/p&gt;
+
+&lt;p&gt;However, as we mentioned, all the Wechaty ecosystems are build on top of TypeScript, especially all the Wechaty Puppets. How can we reuse them in Polyglot Wechaty?&lt;/p&gt;
+
+&lt;p&gt;Our goal is to reuse all the TypeScript ecosystems with the Polyglot Wechaty. But how?&lt;/p&gt;
+
+&lt;h2 id=&quot;rpc-for-rescue&quot;&gt;RPC for Rescue&lt;/h2&gt;
+
+&lt;p&gt;The key to using the TypeScript ecosystem in other languages is to cloudify the Wechaty Puppet API.&lt;/p&gt;
+
+&lt;p&gt;As we mentioned before:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Wechaty Puppet&lt;/em&gt; is a standard for maintaining compatibility between IM systems. &lt;em&gt;Wechaty Puppet&lt;/em&gt; defines the universal IM interface for compatibility with Wechaty API to variants of IM systems.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Wechaty is built on top of the Wechaty Puppet API. If we can use the Wechaty Puppet Providers remotely via network, then Polyglot Wechaty will be able to use the Wechaty Puppet API from the TypeScript ecosystem.&lt;/p&gt;
+
+&lt;p&gt;How can we use a Wechaty Puppet Provider remotely via network? The answer is that we can convert it to Remote Procedure Call (RPC).&lt;/p&gt;
+
+&lt;p&gt;The goal of Wechaty RPC is to cloudify our Wechaty Puppet Providers. A Wechaty Puppet Provider, like &lt;a href=&quot;https://github.com/padlocal/wechaty-puppet-padlocal&quot;&gt;PadLocal&lt;/a&gt;, is written in TypeScript and can only be used in TypeScript program locally.&lt;/p&gt;
+
+&lt;p&gt;With RPC, we can design our Wechaty Ecosystem Architecture as the following diagram:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-asciiart&quot;&gt;  +-------------------------------------------------------+
+  |                        Wechaty                        |
+  |                                                       |
+  |                 TypeScript/JavaScript                 |
+  |          Python, Go, Java, .NET, PHP, Scala           |
+  +-------------------------------------------------------+
+
+  +-------------------------------------------------------+
+  |                Wechaty Puppet Abstract                |
+  |                                                       |
+  |                (wechaty-puppet-hostie)                |
+  +-------------------------------------------------------+
+
+    +--------------------+  gRPC  +---------------------+
+
++-----------------------------------------------------------+
+|                  Wechaty Puppet Service                   |
+|                        (Provider)                         |
+|       &amp;lt;https://wechaty.js.org/docs/puppet-services&amp;gt;       |
++-----------------------------------------------------------+
+
+  +-------------------------------------------------------+
+  |                 Wechaty Puppet Abstract               |
+  +-------------------------------------------------------+
+
+  +--------------------------+ +--------------------------+
+  |       Pad Protocol:      | |       Web Protocol:      |
+  | wechaty-puppet-padlocal  | | wechaty-puppet-puppeteer |
+  +--------------------------+ +--------------------------+
+  +--------------------------+ +--------------------------+
+  |     Windows Protocol:    | |       Mac Protocol:      |
+  |  wechaty-puppet-wxwork   | |  wechaty-puppet-macpro   |
+  +--------------------------+ +--------------------------+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;google-remote-procedure-call-grpc&quot;&gt;Google Remote Procedure Call (gRPC)&lt;/h2&gt;
+
+&lt;p&gt;Google Remote Procedure Call (&lt;a href=&quot;https://grpc.io/&quot;&gt;gRPC&lt;/a&gt;) is a modern open source high performance RPC framework that can run in any environment.&lt;/p&gt;
+
+&lt;p&gt;Currently, gRPC provides support for many languages like Node.js, Python, Golang, .NET, C++, Java, etc.&lt;/p&gt;
+
+&lt;p&gt;It is very easy to generate the gRPC client and server interfaces from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.proto&lt;/code&gt; service definition by using protocol buffer compiler &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;protoc&lt;/code&gt; with a special gRPC polyglot plugin to generate gRPC services in all supported languages.&lt;/p&gt;
+
+&lt;p&gt;In Feb 2020, we finished the &lt;a href=&quot;https://github.com/wechaty/grpc&quot;&gt;Wechaty gRPC&lt;/a&gt; service abstracting module with the &lt;a href=&quot;https://github.com/wechaty/wechaty-puppet-hostie&quot;&gt;wechaty-puppet-hostie&lt;/a&gt; implementation.&lt;/p&gt;
+
+&lt;p&gt;Wechaty gRPC is always auto-generating gRPC client from our &lt;a href=&quot;https://github.com/wechaty/grpc/tree/master/proto/wechaty&quot;&gt;wechaty.proto&lt;/a&gt; service defination, and publish them as multi-language modules. Learn more about how it works of our DevOps pipeline by reading our &lt;a href=&quot;https://github.com/wechaty/grpc/tree/master/.github/workflows&quot;&gt;GitHub Action Workflows&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;wechaty-puppet-service&quot;&gt;Wechaty Puppet Service&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Wechaty Puppet Service&lt;/em&gt; is gRPC for &lt;em&gt;Wechaty Puppet Provider&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;For example, we can cloudify the &lt;em&gt;Wechaty Puppet Provider&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wechaty-puppet-padlocal&lt;/code&gt; to a &lt;em&gt;Wechaty Puppet Service&lt;/em&gt; by running our &lt;em&gt;Wechaty Puppet Service Token Gateway&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-wechaty-puppet-service-token-gateway-to-setup-wechaty-puppet-service&quot;&gt;Using Wechaty Puppet Service Token Gateway to Setup Wechaty Puppet Service&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Wechaty Puppet Service Token Gateway&lt;/em&gt; is a gateway for converting the &lt;em&gt;Wechaty Puppet Provider&lt;/em&gt; to a &lt;em&gt;Wechaty Puppet Service&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here’s an example for setup a Wechaty Puppet Service for the PadLocal Puppet Provider.&lt;/p&gt;
+
+&lt;p&gt;Firstly, define the underlying Wechaty Puppet Provider and its parameters:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;WECHATY_PUPPET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'wechaty-puppet-padlocal'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;WECHATY_PUPPET_PADLOCAL_TOKEN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'puppet_padlocal_xxx'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Secondly, specify the token of our Wechaty Puppet Service, with a port for the service(will be used for the docker port mapping)&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;WECHATY_TOKEN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'puppet_hostie_yyy'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;WECHATY_HOSTIE_PORT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;8788 // any available port can be visited from internet
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Thirdly, set log to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;verbose&lt;/code&gt; to get more debug log messages.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;WECHATY_LOG&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;verbose&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;At last, everything we need has been packaged to the docker image &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wechaty/wechaty&lt;/code&gt;. All you need is to use a docker command to start your Wechaty Puppet Service Token Gateway with the above configuration:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;-ti&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--rm&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; WECHATY_PUPPET &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; WECHATY_PUPPET_PADLOCAL_TOKEN &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; WECHATY_TOKEN &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; WECHATY_HOSTIE_PORT &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; WECHATY_LOG &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$WECHATY_HOSTIE_PORT&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$WECHATY_HOSTIE_PORT&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;” &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;
+  wechaty/wechaty
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can see lots of the output log messages in your terminal with the above command.&lt;/p&gt;
+
+&lt;p&gt;Then you can confirm your Wechaty Puppet Service is online by visiting:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://api.chatie.io/v0/hosties/&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;WECHATY_TOKEN&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Replace ${WECHATY_TOKEN} to your real token in the above configuration&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;✅ If you get an HTTP/200 response with a JSON object body that includes your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ip&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;port&lt;/code&gt;, then you are all set.&lt;br /&gt;
+❌ If you get an HTTP/404 response, your Puppet Service Gateway has some issues and needs to be troubleshooting.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-wechaty-puppet-service-with-wechaty&quot;&gt;Using Wechaty Puppet Service with Wechaty&lt;/h2&gt;
+
+&lt;p&gt;Using Wechaty Puppet Service is very easy. Just set the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WECHATY_PUPPET&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wechaty-puppet-hostie&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WECHATY_PUPPET_HOSTIE_TOKEN&lt;/code&gt; to your Wechaty Puppet Service Token.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;WECHATY_PUPPET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;wechaty-puppet-hostie
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;WECHATY_PUPPET_HOSTIE_TOKEN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;__WECHATY_PUPPET_SERVICE_TOKEN__&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+node &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; ts-node/register bot.ts
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You may have a question of what is the value of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WECHATY_PUPPET_HOSTIE_TOKEN&lt;/code&gt;? The answer is that the value should be the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WECHATY_TOKEN&lt;/code&gt; when you set up your Wechaty Puppet Service Gateway in the previous step.&lt;/p&gt;
+
+&lt;h2 id=&quot;ready-to-use-wechaty-puppet-services&quot;&gt;Ready-to-use Wechaty Puppet Services&lt;/h2&gt;
+
+&lt;p&gt;With the power of &lt;em&gt;Wechaty Puppet Service Token Gateway&lt;/em&gt;, we can convert any &lt;em&gt;Wechaty Puppet Provider&lt;/em&gt; to &lt;em&gt;Wechaty Puppet Service&lt;/em&gt; by yourself.&lt;/p&gt;
+
+&lt;p&gt;However, it would be lots of reasons that you need a ready-to-use Wechaty Puppet Service:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;You are a Polyglot Wechaty developer, but you do not want to run another docker container in your system.&lt;/li&gt;
+  &lt;li&gt;You are a TpyeScript Wechaty developer, but the Wechaty Puppet Provider needs a complicated system setup, like an X11 System, Wine, or Android Emulator.&lt;/li&gt;
+  &lt;li&gt;etc.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And there has another scenario for the Wechaty Puppet Provider is closed source, which means you will not be able to install it, but only can use it as a Wechaty Puppet Service.&lt;/p&gt;
+
+&lt;h2 id=&quot;introducing-wechaty-puppet-service-provider&quot;&gt;Introducing Wechaty Puppet Service Provider&lt;/h2&gt;
+
+&lt;p&gt;Our Wechaty Community now has serval Wechaty Puppet Services which works out-of-the-box. All you need is to get a Wechaty Puppet Service Token, then use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wechaty-puppet-hostie&lt;/code&gt; with that token.&lt;/p&gt;
+
+&lt;p&gt;For now, the Wechaty community has four official Wechaty Puppet Services:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wechaty.js.org/docs/puppet-services/wxwork/&quot;&gt;WXWork&lt;/a&gt;: WeCom Windows Protocol&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wechaty.js.org/docs/puppet-services/padlocal/&quot;&gt;PadLocal&lt;/a&gt;: WeChat Pad Protocol&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wechaty.js.org/docs/puppet-services/paimon/&quot;&gt;Paimon&lt;/a&gt;: WeChat Pad Protocol&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wechaty.js.org/docs/puppet-services/donut/&quot;&gt;Donut&lt;/a&gt;: WeChat Windows Protocol&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;More Puppet Service Providers are welcomed, please learn more from &lt;a href=&quot;https://github.com/wechaty/puppet-services&quot;&gt;https://github.com/wechaty/puppet-services&lt;/a&gt; and feel free to contact us at Gitter (&lt;a href=&quot;https://gitter.im/wechaty/wechaty&quot;&gt;https://gitter.im/wechaty/wechaty&lt;/a&gt;) if you have any questions.&lt;/p&gt;
+
+&lt;p&gt;Learn more about all the Wechaty Puppet Services at our official website: &lt;a href=&quot;https://wechaty.js.org/docs/puppet-services/&quot;&gt;https://wechaty.js.org/docs/puppet-services/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;In this post, we clarified the following core concepts of Wechaty:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Wechaty Puppet&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Wechaty Puppet Abstract&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Wechaty Puppet Provider&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Wechaty gRPC&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Wechaty Puppet Service&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Wechaty Puppet Service Token&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Wechaty Puppet Service Provider&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I hope it can help our developer to understand Wechaty ecosystem better.&lt;/p&gt;
+
+&lt;p&gt;The Wechaty Puppet Core repo is &lt;a href=&quot;https://github.com/wechaty/wechaty-puppet&quot;&gt;here&lt;/a&gt; and gRPC repo is &lt;a href=&quot;https://github.com/wechaty/grpc&quot;&gt;there&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Interested in RPA, building chatbots &amp;amp; providing service for developers? &lt;a href=&quot;https://gitter.im/wechaty/wechaty&quot;&gt;Join the Wechaty community on Gitter&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;appendix&quot;&gt;Appendix&lt;/h2&gt;
+
+&lt;p&gt;The following topics on GitHub was created when we were building the Wechaty Puppet Service ecosystem. Please feel free to read them and join the discussion by commenting those issues/discussions.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/puppet-services/discussions/11&quot;&gt;Deprecated Announcement: Padplus service will end on Dec 1st, 2020 #11&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/go-wechaty/issues/22&quot;&gt;go-wechaty implementation wechaty-puppet-hostie discussion. #22&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/wechaty/discussions/1986&quot;&gt;How to create your own Wechaty Hostie Token with the Web Protocol #1986&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/puppet-services/discussions/16&quot;&gt;MemoryCard support: required for stateless puppet service #16&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/puppet-services/discussions/54&quot;&gt;Puppet Service Specifications #54&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/wechaty-puppet-hostie/issues/98&quot;&gt;Support rock puppet service provider. #98&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/wechaty/issues/1947&quot;&gt;the relationship between hostie, grpc, and puppet. #1947&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/wechaty/discussions/1985&quot;&gt;Using your Puppet PadPlus token with Python, Java, and Go Wechaty #1985&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/wechaty/discussions/1927&quot;&gt;Wechaty is All You Need: Python, Go, and Java Translation Project #1927&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/puppet-services/discussions/1&quot;&gt;Wechaty Puppet Service Provider FAQ #1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/puppet-services/discussions/39&quot;&gt;Wechaty Puppet Service Registration &amp;amp; Discovery (w.r.t. token) #39&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wechaty.js.org/2020/08/05/wechaty-puppet-maker/&quot;&gt;Wechaty Workshop for Puppet Makers: How to Make a Puppet for Wechaty&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/grpc/issues/50&quot;&gt;Support GRPC in Go #50&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>huan</name></author><category term="announcement" /><category term="puppet-service" /><category term="news" /><summary type="html">Wechaty is an SDK for chatbot makers. It uses Robotic Progress Automation (RPA) technology to help developers to be more productive for building Conversational User Interface (CUI), which we call it a Chatbot.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://wechaty.js.org/assets/2021/01-wechaty-puppet-service/5-puppets.jpg" /><media:content medium="image" url="https://wechaty.js.org/assets/2021/01-wechaty-puppet-service/5-puppets.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">A OKR Review for the Summer 2020 Summit</title><link href="https://wechaty.js.org/2021/01/04/summer-2020-summit-okr/" rel="alternate" type="text/html" title="A OKR Review for the Summer 2020 Summit" /><published>2021-01-04T00:00:00+00:00</published><updated>2021-01-04T00:00:00+00:00</updated><id>https://wechaty.js.org/2021/01/04/summer-2020-summit-okr</id><content type="html" xml:base="https://wechaty.js.org/2021/01/04/summer-2020-summit-okr/">&lt;p&gt;In Nov 14, 2020, The &lt;a href=&quot;https://isrc.iscas.ac.cn/summer2020/#/summitmeeting&quot;&gt;Open Source Promotion Plan - Summer 2020 Summit&lt;/a&gt; was held in Nanjing (thanks ISCAS &amp;amp; openEuler Community for the organizing!). As an open-source organization we enjoyed this program and we have four people: @univerone, @wj-Mcat, @rickyyin98, and @huan attended the Summit.&lt;/p&gt;
+
+&lt;p&gt;Before the travel to Nanjing, in order to make the goal clear, we have a meeting about how to improve the efforts we can influence in this summit, which leads us to consider to use the OKR (Objective and Key Results) to make everyone understand what we should deliver at the summit.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-okr&quot;&gt;What is OKR&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Objectives and key results (OKR) is a goal-setting framework for defining and tracking objectives and their outcomes.&lt;/p&gt;
+
+  &lt;p&gt;— &lt;a href=&quot;https://en.wikipedia.org/wiki/OKR&quot;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;An OKR consists of an Objective, which tells you where to go, and several Key Results, which are the results you need to achieve to get to your Objective. Initiatives are all the projects and tasks that will help you achieve your Key Results.&lt;/p&gt;
+
+  &lt;p&gt;— &lt;a href=&quot;https://www.perdoo.com/okr-guide/&quot;&gt;The ultimate OKR guide&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The following points about the Key Result are copy/pasted from our previous discussion from our AI-ML.Club: &lt;a href=&quot;https://github.com/BUPT/magic-mirror/issues/17&quot;&gt;BUPT/magic-mirror - OKR管理项目的方式探讨 #17&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-key-result&quot;&gt;What is Key Result&lt;/h2&gt;
+
+&lt;p&gt;The Key Result needs to be an outcome(what we get) instead of output(what we do). At the same time, we have to make sure KRs are value-based, measurable with metrics, and most importantly, should be short.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Measurable: Key results are measurable and should be easy to grade with a number (Google uses a scale of 0 – 1.0)&lt;/li&gt;
+  &lt;li&gt;Short: as short as possible&lt;/li&gt;
+  &lt;li&gt;Value-based&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For an Objective update example, in 1958 NASA had 8 goals including examples like:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“The establishment of long-range studies of the potential benefits to be gained from, the opportunities for, and the problems involved in the utilization of aeronautical and space activities for peaceful and scientific purposes.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;By 1961, thanks to Kennedy, NASA had one Ultimate goal:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Before the decade is out, land a man on the moon and return him safely to earth”.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A short goal will make it easy to be understood, so we should always prevent long descriptions.&lt;/p&gt;
+
+&lt;h3 id=&quot;measurable&quot;&gt;Measurable&lt;/h3&gt;
+
+&lt;p&gt;Almost anything can be measured. If you’re struggling to find Key Results for an Objective, ask yourself “How will I know when my Objective has been achieved?”. Make sure to choose Key Results that are outcome based, look for metrics you don’t directly own or control, but that you can influence.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-initiative-to-do-list&quot;&gt;What is Initiative (To-do list)&lt;/h2&gt;
+
+&lt;p&gt;When we are planning to do something, we are very likely to define a list of todos, because we can control it very easily, like&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I will write 3 blogs this week.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;However, the above description will miss the direction of why we need to do that, and what we want to get an outcome of that action. So we need to move into the high level of a todo description, defines what we want to get as a result of our actions:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I will get my new blogs read by 1,000 chatbot developers.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The above result will not be able to be controlled by ourselves, but we can only influence it, which means we have to write a better blog so that the readers will share it, and we have to think about how to spread the blog article to cover the target users (chatbot developers in this case).&lt;/p&gt;
+
+&lt;p&gt;So, I believe the reason the Padoo introduce the initiative concept to OKRs is that everyone wants to have a TODO list for their OKRs, which could make them more comfortable. And they always want to put a TODO list as the Key Results, which is not right and needs to be clarified.&lt;/p&gt;
+
+&lt;h2 id=&quot;key-result-vs-initiative&quot;&gt;Key Result v.s. Initiative&lt;/h2&gt;
+
+&lt;p&gt;The most important when we are using OKRs is that we have to make sure that we are listing the real &lt;strong&gt;Key Results&lt;/strong&gt; instead of &lt;del&gt;Initiatives&lt;/del&gt; as our Key Results.&lt;/p&gt;
+
+&lt;p&gt;According to &lt;a href=&quot;https://www.perdoo.com/resources/&quot;&gt;What is an OKR?&lt;/a&gt;:&lt;/p&gt;
+
+&lt;h3 id=&quot;1-key-result&quot;&gt;1. Key Result&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“How do I know if I’m getting there?” A Key Result shows you how you’re progressing towards your Objective. Think of it as a signpost with a distance marker.&lt;/p&gt;
+
+  &lt;p&gt;A Key Result is a metric with a starting value and a target value that measures progress towards an Objective.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;2-initiative&quot;&gt;2. Initiative&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“What will I do to get there?” An Initiative describes what you’ll do to influence your Key Results. Think of it as the description of what you’ll do to get to your destination.&lt;/p&gt;
+
+  &lt;p&gt;An Initiative is a description of the work you’ll do to influence a Key Result.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In short, a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Key Result&lt;/code&gt; is “What you can get(outcome)”, and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Initiative&lt;/code&gt; is “What you can do(output)”.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Difference&lt;/th&gt;
+      &lt;th&gt;Outcome V.S. Output&lt;/th&gt;
+      &lt;th&gt;Influence V.S. Control&lt;/th&gt;
+      &lt;th&gt;Value V.S. Activity&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Key Result&lt;/td&gt;
+      &lt;td&gt;What you can GET (outcome)&lt;/td&gt;
+      &lt;td&gt;You cannot control it, you can only INFLUENCE it&lt;/td&gt;
+      &lt;td&gt;Value-based&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Initiative&lt;/td&gt;
+      &lt;td&gt;What you can DO (output)&lt;/td&gt;
+      &lt;td&gt;You can CONTROL it directly&lt;/td&gt;
+      &lt;td&gt;Activity-based&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;At last, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Key Results&lt;/code&gt; must be &lt;strong&gt;measurable&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;wechaty-okrs&quot;&gt;Wechaty OKRs&lt;/h2&gt;
+
+&lt;p&gt;The following OKR discussion is copy/pasted from &lt;a href=&quot;https://github.com/wechaty/summer-of-code/issues/26&quot;&gt;wechaty/summer-of-code - Wechaty Open Source Software Supply Chain 2020 Najing Summit OKR Review #26&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2021/01-summer-2020-summit-okr/goal.png&quot; alt=&quot;Wechaty Goals&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this open-source summit, we have the following &lt;strong&gt;Ultimate Objectives&lt;/strong&gt; and &lt;strong&gt;Key Results&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;h3 id=&quot;ultimate-objectives&quot;&gt;Ultimate Objectives&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Make Wechaty to be known as one of the &lt;strong&gt;best open-source projects&lt;/strong&gt; in China&lt;/li&gt;
+  &lt;li&gt;Make more people get to know &lt;strong&gt;what problem that Wechaty can solve&lt;/strong&gt;.
+    &lt;blockquote&gt;
+      &lt;p&gt;Wechaty is a RPA SDK for Chatbot Makers that supports connecting to WeChat, DingTalk, Lark, WhatsApp, Teams, and Gitter and it can build a chatbot in 6 lines of code in almost any language.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;ultimate-key-results&quot;&gt;Ultimate Key Results&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;100+ influences on-site&lt;/li&gt;
+  &lt;li&gt;500+ new developers join our community:
+    &lt;blockquote&gt;
+      &lt;p&gt;Wechaty Developers’ Home WeChat room, &lt;a href=&quot;https://gitter.im/wechaty/wechaty&quot;&gt;Gitter&lt;/a&gt;, Stars on &lt;a href=&quot;https://github.com/wechaty/wechaty&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;6 blog posts with video embedded form the event with 3,000+ influences&lt;/li&gt;
+  &lt;li&gt;A Standard of Process (SOP) for promoting Wechaty in events in the future
+    &lt;blockquote&gt;
+      &lt;p&gt;Check-list, Resources, Scripts&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;team-okr&quot;&gt;Team OKR&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-okr-wj-mcat&quot;&gt;1. OKR: @wj-Mcat&lt;/h3&gt;
+
+&lt;h4 id=&quot;objectives&quot;&gt;Objectives&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Tell a story that how do I start python-wechaty open-source project and make it attractive&lt;/li&gt;
+  &lt;li&gt;Give a live-coding process that can invite developers into Wechat Group and play with one/two games.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;key-results&quot;&gt;Key Results&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Make a presentation that influence 30+ developers on-site&lt;/li&gt;
+  &lt;li&gt;Write a blog post for the representation that gets 100+ reads from chatbot developers.&lt;/li&gt;
+  &lt;li&gt;Build a Wechat Group at the beginning of the presentation to include 30+ audiences in the rooms.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;2-okr-univerone&quot;&gt;2. OKR: @univerone&lt;/h3&gt;
+
+&lt;h4 id=&quot;objectives-1&quot;&gt;Objectives&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Make Wechaty draw the most attention among all the projects.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;key-results-1&quot;&gt;Key Results&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Collect videos(Captured by Dji and Talk videos), Collect relevant pictures, make a vlog video(with help from Bohao), publish it on YouTube, has 100 views.&lt;/li&gt;
+  &lt;li&gt;Write a blog and have 100 views.&lt;/li&gt;
+  &lt;li&gt;Introduce Wechaty to more than 20 people.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;3-okr-rickyyin98&quot;&gt;3. OKR: @rickyyin98&lt;/h3&gt;
+
+&lt;h4 id=&quot;objectives-2&quot;&gt;Objectives&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Make Wechaty all design to be known as one of the most attractive open-source design in this event&lt;/li&gt;
+  &lt;li&gt;Set up a SOP and make it can cover all similar activities&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;key-results-2&quot;&gt;Key Results&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Present our projects via live code game &amp;amp; flyer, influence 200+ developers&lt;/li&gt;
+  &lt;li&gt;convert 20+ developers to Wechaty Developer.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;4-okr-huan&quot;&gt;4. OKR: @huan&lt;/h3&gt;
+
+&lt;h4 id=&quot;objectives-3&quot;&gt;Objectives&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Tell a story form the Wechaty open source community and make it attractive&lt;/li&gt;
+  &lt;li&gt;Play a ding/dong game with audiences in the room to demo what Wechaty can do and make it fun&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;key-results-3&quot;&gt;Key Results&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Make a presentation that influences 50+ developers on site&lt;/li&gt;
+  &lt;li&gt;Write a blog post for the presentation that get 100+ reads from chatbot developers&lt;/li&gt;
+  &lt;li&gt;Build a WeChat group at the beginning of the presentation to includes 50+ audiences in the room&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;related-links&quot;&gt;Related Links&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.perdoo.com/the-ultimate-okr-guide/&quot;&gt;The Ultimate Guide to OKR&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rework.withgoogle.com/guides/set-goals-with-okrs/steps/introduction/&quot;&gt;Guide: Set goals with OKRs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Teaser image credit: &lt;a href=&quot;https://plan.io/blog/what-are-okrs/&quot;&gt;What Are OKRs? How to Use OKRs for Planning (and Achieving) Your Goals&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>huan</name></author><category term="announcement" /><category term="okr" /><category term="news" /><summary type="html">In Nov 14, 2020, The Open Source Promotion Plan - Summer 2020 Summit was held in Nanjing (thanks ISCAS &amp;amp; openEuler Community for the organizing!). As an open-source organization we enjoyed this program and we have four people: @univerone, @wj-Mcat, @rickyyin98, and @huan attended the Summit.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://wechaty.js.org/assets/2021/01-summer-2020-summit-okr/what-is-okr.png" /><media:content medium="image" url="https://wechaty.js.org/assets/2021/01-summer-2020-summit-okr/what-is-okr.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">.NET Wechaty Getting Start</title><link href="https://wechaty.js.org/2020/12/31/dotnet-wechaty-getting-start/" rel="alternate" type="text/html" title=".NET Wechaty Getting Start" /><published>2020-12-31T00:00:00+00:00</published><updated>2020-12-31T00:00:00+00:00</updated><id>https://wechaty.js.org/2020/12/31/dotnet-wechaty-getting-start</id><content type="html" xml:base="https://wechaty.js.org/2020/12/31/dotnet-wechaty-getting-start/">&lt;h2 id=&quot;net-wechaty框架介绍&quot;&gt;.NET Wechaty框架介绍&lt;/h2&gt;
+
+&lt;p&gt;.NET Wechaty 是使用.Net Core对TS版本Wechaty的翻译。&lt;/p&gt;
+
+&lt;p&gt;.Net Core 支持跨平台，因此.NET Wechaty同样也支持跨平台,目前在Windows,Centos,Ubuntu 下已测试通过，Mac未测试，如果有Mac系统的欢迎测试，ARM架构的目前只测试Raspberry，但是GRPC连接有问题，问题待排查。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/wechaty/dotnet-wechaty&quot;&gt;.NET Wechaty&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/wechaty/dotnet-wechaty-getting-started&quot;&gt;dotnet-wechaty-getting-started&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;net-wechaty-geetting-start&quot;&gt;.NET Wechaty Geetting Start&lt;/h2&gt;
+
+&lt;h3 id=&quot;新建一个控制台程序&quot;&gt;新建一个控制台程序&lt;/h3&gt;
+
+&lt;p&gt;新建一个.Net Core 3.1 控制台程序&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/12-dotnet-wechaty/console-project.png&quot; alt=&quot;创建console控制台程序&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;添加nuget包&quot;&gt;添加Nuget包&lt;/h3&gt;
+
+&lt;p&gt;只需要引用Wechaty一个Nuget包即可，其他相关包会自动引入&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/12-dotnet-wechaty/add-wechaty-nuget.png&quot; alt=&quot;添加Wechaty Nuget包&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;6行代码运行一个bot&quot;&gt;6行代码运行一个Bot&lt;/h3&gt;
+
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 初始化一个bot&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bot&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PuppetOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 如何申请token，请看：https://github.com/juzibot/Welcome/wiki/Everything-about-Wechaty&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Token&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;your token&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PuppetService&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;wechaty-puppet-hostie&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+ &lt;span class=&quot;c1&quot;&gt;// 监听bot事件&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bot&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnScan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qrcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ScanStatus&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnLogin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ContactSelf&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnHeartbeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;实现ding-dong-最简单的功能&quot;&gt;实现ding dong 最简单的功能&lt;/h3&gt;
+
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bot&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnScan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qrcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ScanStatus&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnLogin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ContactSelf&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;c1&quot;&gt;// 如果接收到的文本消息为 ding&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ding&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// 则发送一个文本: dong&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Say&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dong&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnHeartbeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;完整代码&quot;&gt;完整代码&lt;/h3&gt;
+
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System.Threading.Tasks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Wechaty.Module.Puppet.Schemas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Wechaty.User&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;dotnet_wechaty_getting_start&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Program&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Task&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// 初始化一个bot&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bot&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PuppetOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;Token&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;puppet_rock_4448d7e832fd436c9f2a1d33eea8e865&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;PuppetService&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;wechaty-puppet-hostie&quot;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;// 监听bot事件&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bot&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnScan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qrcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ScanStatus&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QrcodeServerUrl&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://wechaty.github.io/qrcode/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ScanStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Waiting&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ScanStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Timeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qrcodeImageUrl&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QrcodeServerUrl&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qrcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qrcodeImageUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ScanStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Scanned&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnLogin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ContactSelf&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ding&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Say&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dong&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+                &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnHeartbeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ReadLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;wechaty-社区&quot;&gt;Wechaty 社区&lt;/h2&gt;
+
+&lt;h3 id=&quot;社区信息&quot;&gt;社区信息&lt;/h3&gt;
+
+&lt;p&gt;:octocat: &lt;a href=&quot;https://github.com/Wechaty/wechaty&quot;&gt;https://github.com/Wechaty/wechaty&lt;/a&gt;&lt;br /&gt;
+:beetle: &lt;a href=&quot;https://github.com/Wechaty/wechaty/issues&quot;&gt;https://github.com/Wechaty/wechaty/issues&lt;/a&gt;&lt;br /&gt;
+:book: &lt;a href=&quot;https://github.com/Wechaty/wechaty/wiki&quot;&gt;https://github.com/Wechaty/wechaty/wiki&lt;/a&gt;&lt;br /&gt;
+:whale: &lt;a href=&quot;https://hub.docker.com/r/wechaty/wechaty&quot;&gt;https://hub.docker.com/r/wechaty/wechaty&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;多语言wechaty&quot;&gt;多语言Wechaty&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/wechaty/python-wechaty&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/Wechaty-Python-blue&quot; alt=&quot;Python Wechaty&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/wechaty/go-wechaty&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/Wechaty-Go-7de&quot; alt=&quot;Go Wechaty&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/wechaty/java-wechaty&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/Wechaty-Java-f80&quot; alt=&quot;Java(Kotlin) Wechaty&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/wechaty/scala-wechaty&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/Wechaty-Scala-890&quot; alt=&quot;Scala Wechaty&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/wechaty/php-wechaty&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/Wechaty-PHP-99c&quot; alt=&quot;PHP Wechaty&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/wechaty/dotnet-wechaty&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/Wechaty-.NET-629&quot; alt=&quot;.NET(C#) Wechatyin&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/wechaty&quot;&gt;Wechaty&lt;/a&gt; - Conversatioanl SDK for Chatot Makers (TypeScript)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/python-wechaty&quot;&gt;Python Wechaty&lt;/a&gt; - RPA SDK for Chatbot Makers written in Python&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/go-wechaty&quot;&gt;Go Wechaty&lt;/a&gt; - RPA SDK for Chatbot Makers written in Go&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/java-wechaty&quot;&gt;Java Wechaty&lt;/a&gt; - RPA SDK for Chatbot Makers written in Java(Kotlin)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/scala-wechaty&quot;&gt;Scala Wechaty&lt;/a&gt; - RPA SDK for Chatbot Makers written in Scala&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/php-wechaty&quot;&gt;PHP Wechaty&lt;/a&gt; - RPA SDK for Chatbot Makers written in PHP&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/dotnet-wechaty&quot;&gt;.Net(C#) Wechaty&lt;/a&gt; - RPA SDK for Chatbot Makers written in .NET(C#)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;join-wechaty&quot;&gt;Join Wechaty&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://wechaty.js.org/img/friday-qrcode.svg&quot; alt=&quot;Wechaty Friday.BOT QR Code&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;口令：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wechaty&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;net-wechaty-contributors-招募&quot;&gt;.NET Wechaty Contributors 招募&lt;/h2&gt;
+
+&lt;p&gt;如果您对.NET 感兴趣，对Wechaty感兴趣欢迎加入.NET Wechaty Tearm
+&lt;a href=&quot;https://github.com/wechaty/dotnet-wechaty/issues/24&quot;&gt;#pr-24&lt;/a&gt;
+有任何关于.NET Wechaty的开发问题，可以在该issue下提问&lt;/p&gt;</content><author><name>jesn</name></author><category term="tutorial" /><category term="dotnet-wechaty" /><category term="csharp-wechaty" /><category term="csharp" /><category term="dotnet" /><summary type="html">.NET Wechaty框架介绍</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://wechaty.js.org/assets/2020/12-dotnet-wechaty/dotnet-wechaty.png" /><media:content medium="image" url="https://wechaty.js.org/assets/2020/12-dotnet-wechaty/dotnet-wechaty.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Chatbot SDK Wechaty 获国内顶级开源组织颁发大奖</title><link href="https://wechaty.js.org/2020/12/31/open-source-award-wechaty/" rel="alternate" type="text/html" title="Chatbot SDK Wechaty 获国内顶级开源组织颁发大奖" /><published>2020-12-31T00:00:00+00:00</published><updated>2020-12-31T00:00:00+00:00</updated><id>https://wechaty.js.org/2020/12/31/open-source-award-wechaty</id><content type="html" xml:base="https://wechaty.js.org/2020/12/31/open-source-award-wechaty/">&lt;p&gt;​​12月30日，Wechaty开源社区再度拿下重要荣誉，由中国开源云联盟举办的《第十届中国云计算标准和应用大会》上，Wechaty与阿里、小米、华为等巨头并列，入选中国优秀开源项目。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/12-open-source-award-wechaty/oss-honor.jpg&quot; alt=&quot;中国开源云联盟 - 2020优秀开源项目 - Wechaty&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;中国开源云联盟（COSCL）成立于2012年8月，是我国最顶级开源组织之一，现有我国180余家开源生态圈产、学、研、用成员单位，致力于联合国内开源产业界相关方，在中国共同推动开源生态系统搭建、技术社区建设、开源项目培育、开源团体标准研制、开源技术推广应用等工作。&lt;/p&gt;
+
+&lt;p&gt;参选项目方案要具备很强的技术专业特点以及深入的行业贡献，同时，还要考察技术未来发展前景等多个维度，考评制度非常严格，此次，拿下优秀开源项目荣誉，证明了Wechaty得到了行业的高度认可。&lt;/p&gt;
+
+&lt;p&gt;Wechaty是2016年基于Apache-2.0许可证发布的开源对话式交互人机界面SDK，具备极简开发、多语言、丰富组件等关键能力，并支持微信、Whatsapp、Gitter、飞书、快手等各大即时通讯工具对话平台，已经广泛应用在教育、零售、社区管理等领域。&lt;/p&gt;
+
+&lt;p&gt;Wechaty 联合作者李佳芮表示，Wechaty在行业中已成为了创新者，Wechaty除了具备聊天对话机器人的基础功能之外，还内置了丰富的插件模块，并且拥有灵活扩展支持通用IM平台的Puppet插件，最终实现跨即时通讯工具对话平台的交互统一化，为客户在对话式交互人机界面应用场景上快速开发的同时降低管理成本；并且，Wechaty运营中聚合了Wechaty开源社区的大量开发者开源项目，电商、教育、社区等，通过Wechaty降低开发门槛，可以达到传统应用系统快速对话式交互化，为开发者带来极大的便利性。&lt;/p&gt;
+
+&lt;p&gt;未来，Wechaty将继续保持开源开放，与更多的人工智能、对话人机界面上下游生态伙伴合作共赢。​​​​&lt;/p&gt;</content><author><name>lijiarui</name></author><category term="announcement" /><category term="award" /><category term="honor" /><category term="open-source" /><category term="news" /><category term="sticky" /><summary type="html">​​12月30日，Wechaty开源社区再度拿下重要荣誉，由中国开源云联盟举办的《第十届中国云计算标准和应用大会》上，Wechaty与阿里、小米、华为等巨头并列，入选中国优秀开源项目。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://wechaty.js.org/assets/2020/12-open-source-award-wechaty/oss-award-rui.jpg" /><media:content medium="image" url="https://wechaty.js.org/assets/2020/12-open-source-award-wechaty/oss-award-rui.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">今年夏天，Wechaty 社区与 9 位开源后浪的故事</title><link href="https://wechaty.js.org/2020/12/31/summer-2020-student-developers/" rel="alternate" type="text/html" title="今年夏天，Wechaty 社区与 9 位开源后浪的故事" /><published>2020-12-31T00:00:00+00:00</published><updated>2020-12-31T00:00:00+00:00</updated><id>https://wechaty.js.org/2020/12/31/summer-2020-student-developers</id><content type="html" xml:base="https://wechaty.js.org/2020/12/31/summer-2020-student-developers/">&lt;p&gt;今夏， Wechaty 社区诞生了 9 位后浪贡献者：毕凯乔、王俊伟、谢昱清、范蕊、江姗姗、林昊翰、唐光彬、肖梓霖与孔祥哲。他们都还是正在就读本科与研究所的学生。&lt;/p&gt;
+
+&lt;p&gt;9 位后浪贡献者与 Wechaty 的故事要从今年中科院软件所和华为 openEuler 项目共同举办的“开源软件供应链点亮计划——暑期 2020” 说起。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/12-summer-2020-student-developers/summer-2020.png&quot; alt=&quot;summer 2020&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;故事的开始&quot;&gt;故事的开始&lt;/h2&gt;
+
+&lt;p&gt;在这 9 位学生成为贡献者的过程中，我们不能不提到那些作为学生指路明灯的社区导师们。&lt;/p&gt;
+
+&lt;p&gt;在参与活动前，Wechaty 社区负责辅导学生的导师们正聚在一起讨论任务的设计。由于 Wechaty 项目相当年轻，这也是许多导师第一次参加类似的活动，大家难免感到些许的忐忑。&lt;/p&gt;
+
+&lt;p&gt;很幸运的是，最终我们还是吸引了一群优秀的学生参加到我们的项目中，并在 7 月 - 9 月的这 3 个月的时间中，Wechaty 社区诞生了 9 位开源新星。大部分的学生都是第一次参加到大型的生产项目中，在这个过程中发现自己的不足，也提升了工程实践上的能力，提高了读代码和分析代码的能力。其中也有同学在与社区互动的同时了解了开源社区互助的精神，并祈愿自己能在未来也继续发挥这种精神来帮助更多的人。&lt;/p&gt;
+
+&lt;p&gt;这 9 位同学们开发的项目中有些功能已经发布上线，为众多的社区用户所用；其他则会在未来的版本中陆续与大家见面。在文章后面我们将详细介绍这 9 个项目的具体细节和学生/导师们对本次开源活动的一些体会：&lt;/p&gt;
+
+&lt;h2 id=&quot;项目-1---基于python-wechaty的群聊助手机器人chassist&quot;&gt;项目 1 - 基于python-wechaty的群聊助手机器人（CHAssisT）&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;暑期2020的优秀学生最具潜力奖！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/12-summer-2020-student-developers/kongxiangzhe.webp&quot; alt=&quot;Wechaty Summer 2020 孔祥哲&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;学生：孔祥哲，清华大学（大二）&lt;/li&gt;
+  &lt;li&gt;导师：吴京京&lt;/li&gt;
+  &lt;li&gt;Issue: &lt;a href=&quot;https://github.com/wechaty/summer-of-code/issues/6&quot;&gt;https://github.com/wechaty/summer-of-code/issues/6&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Git: &lt;a href=&quot;https://github.com/kxz18/python-wechaty-groupchat-bot&quot;&gt;https://github.com/kxz18/python-wechaty-groupchat-bot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Blog: &lt;a href=&quot;https://wechaty.js.org/2020/08/14/chassist-bot-final/&quot;&gt;https://wechaty.js.org/2020/08/14/chassist-bot-final/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;项目描述&quot;&gt;项目描述&lt;/h3&gt;
+
+&lt;p&gt;在实际工作和学习过程中，微信作为主要的沟通渠道工具，承载着主要的事件发布任务。可是由于群聊信息是依时间线展开，一旦信息数量过大，将导致历史消息难以寻找。故此时需要一款群聊助手机器人，能够根据引用消息的回复，提取出其中的历史消息，并将其打上对应的标签同时保存到服务器本地。消息是保存在群聊助手机器人内部中，群内人员只需要艾特助手机器人即可查询历史消息，同时会定时清除和展示一定时间段内的历史打标消息，同时还支持手动清除和展示历史打标消息。&lt;/p&gt;
+
+&lt;p&gt;本项目基于python-wechaty实现了一个群聊助手机器人。该机器人主要由四个插件组成。第一个插件是群聊消息打标插件，通过群成员引用重要消息回复机器人的方式记录重要信息，以便之后以问答的方式进行查找。第二个插件是定时消息插件，用于定时消息的发放。第三个插件是群成员的管理插件，当有新人进群时进行欢迎，当一定人数群成员对某位群成员言行表示不适时自动从群聊中删除该位群成员。第四个插件用于提升交互，为帮助系统插件，提供自定义的功能文档，辅助前三个插件工作。四个插件也可单独使用。&lt;/p&gt;
+
+&lt;h3 id=&quot;心得体会&quot;&gt;心得体会&lt;/h3&gt;
+
+&lt;p&gt;本次SoC活动让我接触了开源社区，并进行了一次软件工程的简单实践。从刚开始的需求确认、项目技术确认，到每周的迭代更新、单元测试，到最后的项目文档书写、CI配置，整个过程和基本的软件工程是一致的。&lt;/p&gt;
+
+&lt;p&gt;在项目前期，最重要的是确定好项目的需求，并根据现有需求和以后可能增加的需求进行项目的架构。这步虽然不涉及实质性代码书写，但对之后的整个开发过程都有非常大的指导意义。需求是否明确，架构是否合适，会决定开发过程的难度和代码量，因此一定要认真对待。就我自己而言，我花费了近两周的时间进行需求确认和项目架构。确认需求时可以用用户故事的形式，容易发现需求文档中的细节问题，项目架构可以用UML图、泳道图等。项目架构多采取OOP的思想，保证有较好的扩展性。在架构完成之后，可以根据不同模块的难度和依赖关系进行开发排期。有了详细的计划，之后才能更注重于开发本身，从而提升效率。&lt;/p&gt;
+
+&lt;p&gt;项目真正进入开发之后，可能会时不时遇到问题，大多数问题都能用搜索引擎解决，百度搜不到的可以用google，如果是具体的第三方库的问题，则通常可以通过查阅文档和github的issue解决。如果实在无法解决，也可以在例会中向导师寻求帮助。在代码书写的过程中，最好能提前配置好社区的代码风格检查，如果社区没有配置这类检查的惯例，也最好能先多学习社区的代码，保证开发过程中代码的规范性和可读性。同时，对于大型项目而言，由于整体统调debug的难度较大，因此单元测试是非常必要的，在一个模块完成之后，一定要配置相应的单元测试，保证该模块实现没有问题，这样最后把所有模块组合起来之后出bug的概率就很小了。&lt;/p&gt;
+
+&lt;p&gt;开发完成后，还需要进行文档的书写和CI的配置。这两项内容其实社区一般都会有范例提供，文档保证和社区风格相近或一致即可。写文档的时候还是要先从使用者的角度考虑，再给出开发者需要的说明文档。因为多数人选择项目时肯定会先看项目的使用方法和功能说明，当真正选中项目进行后续开发时，才会去参考开发者所需的接口和项目架构。&lt;/p&gt;
+
+&lt;h3 id=&quot;导师寄语&quot;&gt;导师寄语&lt;/h3&gt;
+
+&lt;p&gt;孔祥哲同学根据原定项目需求，迅速完成大部分功能，切代码质量非常好。期间与我保持着密切的联系，主动咨询问题，解决项目中的各种难题。孔祥哲同学自项目开始之期就开始高效率的开发，每天都有足够的代码提交量，积极完成项目功能，且能够精准的剖析出项目中存在的各种问题，承担着该项目的主要工作，包括需求深度分析，模块开发和扩展模块的讨论。&lt;/p&gt;
+
+&lt;p&gt;该同学的编程能力，对业务的分析能力都非常好，期间能够快速精准的发现主要问题，加快项目的开发速度，是一个十分优秀的实践者。该学生在过程中表现出高效率，希望该同学能够继续按照自己的兴趣，继续学习，期待你以后的高光时刻。&lt;/p&gt;
+
+&lt;h2 id=&quot;项目-2---基于开放-api-封装-wechaty-接口下的飞书聊天机器人&quot;&gt;项目 2 - 基于开放 API 封装 Wechaty 接口下的飞书聊天机器人&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/12-summer-2020-student-developers/fanrui.webp&quot; alt=&quot;Wechaty Summer 2020 范蕊&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;学生：范蕊，南开大学（大四）&lt;/li&gt;
+  &lt;li&gt;导师：高原，李佳芮&lt;/li&gt;
+  &lt;li&gt;Issue: &lt;a href=&quot;https://github.com/wechaty/summer-of-code/issues/12&quot;&gt;https://github.com/wechaty/summer-of-code/issues/12&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Git: &lt;a href=&quot;https://github.com/Roxanne718/wechaty-puppet-lark&quot;&gt;https://github.com/Roxanne718/wechaty-puppet-lark&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Blog: &lt;a href=&quot;https://wechaty.js.org/2020/09/30/wechaty-puppet-lark-final-blog/&quot;&gt;https://wechaty.js.org/2020/09/30/wechaty-puppet-lark-final-blog/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;项目描述-1&quot;&gt;项目描述&lt;/h3&gt;
+
+&lt;p&gt;本项目主要实现飞书版本的puppet，帮助开发者快速将 Wechaty 微信机器人移植到飞书上。实现的主要思路是根据飞书开放平台提供的API实现puppet内的功能函数。&lt;/p&gt;
+
+&lt;h3 id=&quot;心得体会-1&quot;&gt;心得体会&lt;/h3&gt;
+
+&lt;p&gt;这是我第一次在开源社区贡献代码，感谢活动主办方和Wechaty社区的帮助和支持。虽然只有短短三个月的时间，但我在这个项目中收获了很多。在与导师的交流中学习到了很多优秀的开发思路和习惯，也认识到了很多优秀的同伴。目前这个项目还没有达到我预期的水准，后续我还会继续跟进、完善，希望能完成一套完整的飞书机器人框架。&lt;/p&gt;
+
+&lt;p&gt;这是我第一次严格意义上自己独立开发，在开发过程中遇到不少问题，如前后接口不一致、项目后期修改了前期的逻辑等等。在为新的bug焦头烂额的过程中我越来越理解到了工程化的重要性，希望自己能汲取教训，在今后的开发中做得更好。&lt;/p&gt;
+
+&lt;p&gt;最后，希望“开源软件供应链点亮计划”系列活动越办越好，相信未来的开发者们也能从中获得成长。&lt;/p&gt;
+
+&lt;h2 id=&quot;项目-3---基于python-wechaty建立一个斗图机器人&quot;&gt;项目 3 - 基于Python-wechaty建立一个斗图机器人&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;学生：肖子霖，四川大学（大三）&lt;/li&gt;
+  &lt;li&gt;导师：黄纯洪&lt;/li&gt;
+  &lt;li&gt;Issue: &lt;a href=&quot;https://github.com/wechaty/summer-of-code/issues/7&quot;&gt;https://github.com/wechaty/summer-of-code/issues/7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Git: &lt;a href=&quot;https://github.com/MrZilinXiao/python-wechaty-meme-bot/&quot;&gt;https://github.com/MrZilinXiao/python-wechaty-meme-bot/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Blog: &lt;a href=&quot;https://wechaty.js.org/2020/09/27/python-wechaty-meme-bot-final/&quot;&gt;https://wechaty.js.org/2020/09/27/python-wechaty-meme-bot-final/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;项目描述-2&quot;&gt;项目描述&lt;/h3&gt;
+
+&lt;p&gt;斗图功能是目前很多年轻人，甚至很多00后非常喜欢玩的，很受20岁左右的人的喜爱。目前市面上有很多斗图的软件，自动生成斗图的软件，还有很多自制的表情包也拿出来斗图，其下载量也还是不错的。所以说，在此背景下，开发出一款基于Python-wechaty的斗图机器人也是不错的。&lt;/p&gt;
+
+&lt;p&gt;本项目基于OCR与自然语言生成技术，实现了一个能基于使用者发送的图片表情内容进行即时交互的斗图机器人，项目主要使用了GPT2作为语言生成模型，chineseocr_lite作为OCR模块，同时支持多轮对话与对话回复的互相关损失计算，此外还提供了RESTFul API接口，可以为Wechaty多语言计划、甚至是其他的chatbot提供斗图服务。&lt;/p&gt;
+
+&lt;h3 id=&quot;心得体会-2&quot;&gt;心得体会&lt;/h3&gt;
+
+&lt;p&gt;与很多参与活动的同学一样，我也是第一次参与到开源社区的工作中来，在此之前我的Github可以说只算得上是个人的项目仓库；在为期三个月的开发过程中，我学习了许多与开源社区、Wechaty生态相关的内容，同时也了解到了CI/CD流程、代码风格等很难在本科课本中找到的内容；尽管作为本科生，我并未接触过太多开源社区，但在与社区核心成员、同样参加暑期2020活动的同学沟通的过程中，我逐渐发现Wechaty社区成员间相互交流的氛围深深吸引了我。尽管暑期2020活动已落下帷幕，但我们所有参与活动同学的开源之旅却才刚刚开始，我希望我个人在今后不断的磨练中能提高开发水平，能继续为包括Wechaty社区在内的开源社区做出力所能及的贡献！&lt;/p&gt;
+
+&lt;p&gt;最后，再次感谢中科院软研所与OpenEuler社区主办的暑期2020活动，感谢Wechaty社区全体成员、特别是社区导师黄老师的悉心指导，感谢其余参与活动小伙伴的踊跃分享与积极交流！&lt;/p&gt;
+
+&lt;h3 id=&quot;导师寄语-1&quot;&gt;导师寄语&lt;/h3&gt;
+
+&lt;p&gt;项目的初衷是做一个“能”斗图以及“会”斗图的机器人，肖子霖在项目中期完成了“能”斗图的机器人，在项目的后期，“能”斗图的机器人也是完成了升华，成为“会”斗图的机器人。从最终结果来看，肖子霖同学的完成情况还是比较好的。&lt;/p&gt;
+
+&lt;p&gt;在项目后期的实施过程中，肖子霖同学克服各种困难，在自己不熟悉的领域，比如自然语言处理，也是取得了一定的成绩，这一点是可以肯定的。在项目过程中，肖子霖积极参与项目的开发，在未知的领域中进行探索，努力寻找解决问题的方案与办法，最终完成一个”会”斗图的机器人。&lt;/p&gt;
+
+&lt;p&gt;本项目在后期的话，由于机器学习的特殊性质，可能代码量并不是特别多，工作量上面主要突出在不断修改模型以及调参，最终一个“会”斗图的机器人才能得以完成。&lt;/p&gt;
+
+&lt;p&gt;总体上来说，本次项目肖子霖同学完成得不错。从一开始的表情包的识别，包括文字识别和情感识别，到后来的“能”斗图的机器人，再到最后的“会”斗图的机器人，肖子霖同学都用实际行动完成了项目。&lt;/p&gt;
+
+&lt;p&gt;最后一个建议：从目前呈现的效果来看，“怼”的效果可能还欠缺一点火候，希望后期可以“怼”得更好。&lt;/p&gt;
+
+&lt;h2 id=&quot;项目-4---编写一个每日一句插件&quot;&gt;项目 4 - 编写一个“每日一句”插件&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/12-summer-2020-student-developers/shanshan.webp&quot; alt=&quot;Wechaty Summer 2020 江姗姗&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;暑期2020的优秀学生突出贡献奖！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;学生：江姗姗，北京大学（大四）&lt;/li&gt;
+  &lt;li&gt;导师：Gcaufy&lt;/li&gt;
+  &lt;li&gt;Issue: &lt;a href=&quot;https://github.com/wechaty/summer-of-code/issues/10&quot;&gt;https://github.com/wechaty/summer-of-code/issues/10&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Git: &lt;a href=&quot;https://github.com/univerone/WordsPerDay&quot;&gt;https://github.com/univerone/WordsPerDay&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Blog: &lt;a href=&quot;https://wechaty.js.org/2020/09/26/wechaty-words-per-day-plugin-final/&quot;&gt;https://wechaty.js.org/2020/09/26/wechaty-words-per-day-plugin-final/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;项目描述-3&quot;&gt;项目描述&lt;/h3&gt;
+
+&lt;p&gt;利用插件为机器人赋能。在很多交流群中会有需求说每天的某个时间机器人在群里发送一句话，或者一篇文章咨讯。&lt;/p&gt;
+
+&lt;p&gt;比如英文学习群可能需要每天一句英文知识点，炒股群可能需要每天一则财经资讯，工作群每天一心灵鸡汤，等等。&lt;/p&gt;
+
+&lt;h2 id=&quot;项目-5---基于-rpa-封装-wechaty-接口下的快手聊天机器人&quot;&gt;项目 5 - 基于 RPA 封装 Wechaty 接口下的快手聊天机器人&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;学生：毕凯乔，长春工业大学（大四）&lt;/li&gt;
+  &lt;li&gt;导师：王凯峰，尹伯昊&lt;/li&gt;
+  &lt;li&gt;Issue: &lt;a href=&quot;https://github.com/wechaty/summer-of-code/issues/14&quot;&gt;https://github.com/wechaty/summer-of-code/issues/14&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Git: &lt;a href=&quot;https://github.com/bikaiqiao/kuaishouPuppet.git&quot;&gt;https://github.com/bikaiqiao/kuaishouPuppet.git&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Blog: &lt;a href=&quot;https://wechaty.js.org/2020/08/20/wechaty-puppet-kuaishou-mid-term/&quot;&gt;https://wechaty.js.org/2020/08/20/wechaty-puppet-kuaishou-mid-term/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;项目描述-4&quot;&gt;项目描述&lt;/h3&gt;
+
+&lt;p&gt;快手内部有强大的IM系统，大量用户已经习惯直接在快手内与内容创作者和粉丝群进行聊天沟通。&lt;/p&gt;
+
+&lt;p&gt;但是目前没有成熟的快手聊天机器人框架，对于繁琐的自动回复、群管理等运营场景，尚未出现完整成熟的解决方案。&lt;/p&gt;
+
+&lt;h3 id=&quot;心得体会-3&quot;&gt;心得体会&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Source: &lt;a href=&quot;http://www.ccutchi.com:8205/zidonghua/TemplateForm_view.aspx?id=851&amp;amp;ClassOneID=20&quot;&gt;恭喜我院2017级毕凯乔、王俊伟同学…成功参与了开源软件供应链点亮计划——暑期2020并顺利结项&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;作为一名大四大学生，即将毕业工作，深感自身专业技能的不足。在CSDN中看到了“开源软件供应链点亮计划——暑期2020”的活动，这项活动为鼓励大学生能更多的参与维护开源社区的工作，给出了丰厚的奖金和礼品。而我更需要在这项活动中提升自己的专业技能，为将来的工作铺垫道路。&lt;/p&gt;
+
+&lt;p&gt;我们的参与的社区是Wechaty社区，最开始主要开发wechat的聊天机器人，而在这次活动中，该社区希望能够把自己的聊天机器人桥接到更多的平台，我们分别选择了“_基于__RPA_封装_Wechaty_接口下的快手聊天机器人”和“_基于__RPA_封装_Wechaty_接口下的抖音聊天机器人”。社区使用的语言是typescript，比我们平时使用的javascript的语法要略难一些。同时这也是我们第一次接触这么大规模的项目源码，项目的解决方案又并没有太多的开源先例，也较难搜寻。我们先后尝试了三种思路，最后才在社区导师的帮助下，完成了demo版本。&lt;/p&gt;
+
+&lt;p&gt;通过参加这次活动，我都深刻的认识到了自己技术水平的不足，在面对大型项目的时候并不能迅速的找到最佳解决方案。我们虽然通过了活动的最终审核，但是在内卷愈发严重的今天，我们可能会为曾经年少轻狂的无知付出惨痛的代价。现在距离大学毕业仅仅剩下半年左右的时间，亡羊补牢，为时不晚。我将会在接下来的生活中，更加努力的学习专业知识，提升技术水平，以让自己在未来能获得更高的竞争力。&lt;/p&gt;
+
+&lt;p&gt;希望大家都能够在筚路蓝缕中砥砺前行。&lt;/p&gt;
+
+&lt;h2 id=&quot;项目-6---基于rpa封装的wechaty接口下的抖音聊天机器人&quot;&gt;项目 6 - 基于RPA封装的Wechaty接口下的抖音聊天机器人&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;学生：王俊伟，长春工业大学（大四）&lt;/li&gt;
+  &lt;li&gt;导师：王凯峰，尹伯昊&lt;/li&gt;
+  &lt;li&gt;Issue: &lt;a href=&quot;https://github.com/wechaty/summer-of-code/issues/13&quot;&gt;https://github.com/wechaty/summer-of-code/issues/13&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Git: &lt;a href=&quot;https://github.com/gavinwang23/wechaty-puppet-douyin&quot;&gt;https://github.com/gavinwang23/wechaty-puppet-douyin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Blog: &lt;a href=&quot;https://wechaty.js.org/2020/10/13/wechaty-puppet-douyin-final-term/&quot;&gt;https://wechaty.js.org/2020/10/13/wechaty-puppet-douyin-final-term/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;项目描述-5&quot;&gt;项目描述&lt;/h3&gt;
+
+&lt;p&gt;抖音内部有强大的IM系统，大量用户已经习惯直接在抖音内与内容创作者和粉丝群进行聊天沟通。但是目前没有成熟的抖音聊天机器人框架，对于繁琐的自动回复、群管理等运营场景，尚未出现完整成熟的解决方案。&lt;/p&gt;
+
+&lt;p&gt;Wechaty是全球最大的开源聊天机器人框架，希望实现基于同一套应用层代码实现不同软件的聊天机器人&lt;/p&gt;
+
+&lt;h2 id=&quot;项目-7---基于开放-api-封装-wechaty-接口下的企业微信聊天机器人&quot;&gt;项目 7 - 基于开放 API 封装 Wechaty 接口下的企业微信聊天机器人&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;学生：谢昱清&lt;/li&gt;
+  &lt;li&gt;导师：高原，李佳芮&lt;/li&gt;
+  &lt;li&gt;Issue: &lt;a href=&quot;https://github.com/wechaty/summer-of-code/issues/2&quot;&gt;https://github.com/wechaty/summer-of-code/issues/2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Git: &lt;a href=&quot;https://github.com/Sapio-S/wechaty-puppet-official/&quot;&gt;https://github.com/Sapio-S/wechaty-puppet-official/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Blog: &lt;a href=&quot;https://wechaty.js.org/2020/09/27/puppet-work-final/&quot;&gt;https://wechaty.js.org/2020/09/27/puppet-work-final/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;项目描述-6&quot;&gt;项目描述&lt;/h3&gt;
+
+&lt;p&gt;企业需要将聊天记录储存并进行分析，但接口过于复杂，需要基于现有开放接口进行二次封装企业微信作为微信的企业版，提供多种API来满足企业的不同需求。而企业微信提供的会话存档功能能满足企业消息做留存、进而通过分析大量的消息数据优化工作流程、追责和质检这一需求。&lt;/p&gt;
+
+&lt;p&gt;但是，企业微信的会话存档接口因为安全要求很高，所以有很多的加密，解析等工作，虽然一方面保证了安全性，但是却大大增加了开发的难度。&lt;/p&gt;
+
+&lt;p&gt;Wechaty是全球最大的开源聊天机器人框架，希望实现基于同一套应用层代码实现不同软件的聊天机器人 Wechaty 作为全球最大的聊天机器人开发者社区之一，提供了非常简单的接口实现，让开发者能够用6行代码就实现自己的一个聊天机器人，如果能把企业微信的会话存档接口封装到 Wechaty 里来，则可以大大简化企业内开发者的开发流程。&lt;/p&gt;
+
+&lt;p&gt;因为 Wechaty 是建立在 puppet 系统之上的，puppet 是 Wechaty 依赖的一层抽象层，它定义了底层各个 IM 接入方案需要实现的接口，也正是因为 puppet 抽象层的存在，让很多 Wechaty 开发者可以仅仅通过一个变量，就能够随意切换不同的底层 IM 接入。&lt;/p&gt;
+
+&lt;h3 id=&quot;心得体会-4&quot;&gt;心得体会&lt;/h3&gt;
+
+&lt;p&gt;在项目期间，我感觉自己对于代码的理解能力在不断提高，回首一看，原先不懂的现在都明白个大概了，收获真的很大。在写这个报告的时候其实才算是对整个wechaty的架构有了一个比较清晰的认识，从7月初的完全不懂到八月的逐渐入门再到现在的恍然大悟（或许也没有真正领悟），很有成就感。&lt;/p&gt;
+
+&lt;p&gt;当然遗憾和不足也同样很多。主要的问题还是在于自身，对语言的不熟悉、时间上的冲突，导致目前的结果并不十分令人满意，遗留下了不少的坑待填。对于我而言这也是一个很重要的教训，未来做项目也要规划好时间，及早了解需要的技术栈，这样才能更好地完成任务。&lt;/p&gt;
+
+&lt;p&gt;另：其实本来觉得自己的代码虽然肯定不能直接发布使用，也勉强算是马马虎虎完成了主要的功能。但是一看别人的blog，我陷入了深深的尴尬，其实可以完成度更高、做得更好的。希望这学期学校开设的软件工程等等课程可以让我更深入地理解并熟悉完整开发流程吧！&lt;/p&gt;
+
+&lt;h2 id=&quot;项目-8---为-go-wechaty-设计实现插件体系&quot;&gt;项目 8 - 为 go-wechaty 设计实现插件体系&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;学生：林昊翰，西安电子科技大学（大三）&lt;/li&gt;
+  &lt;li&gt;导师：丁小雨&lt;/li&gt;
+  &lt;li&gt;Issue: &lt;a href=&quot;https://github.com/wechaty/summer-of-code/issues/9&quot;&gt;https://github.com/wechaty/summer-of-code/issues/9&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Git: &lt;a href=&quot;https://github.com/wechaty/go-wechaty/pull/67&quot;&gt;https://github.com/wechaty/go-wechaty/pull/67&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Blog: &lt;a href=&quot;https://wechaty.js.org/2020/09/27/go-wechaty-plugin/&quot;&gt;https://wechaty.js.org/2020/09/27/go-wechaty-plugin/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;项目描述-7&quot;&gt;项目描述&lt;/h3&gt;
+
+&lt;p&gt;wechaty 是一款支持多协议的微信接入方案，随着社区多语言生态的建立，吸引了更多的开发者和爱好者的加入；同时需求的推动和技术的发展，插件系统逐渐完善，但是在多语言系统中 Plugin 体系尚未完成，我们希望通过这个任务，能够让更多的人加入 go-wechaty 的建设。&lt;/p&gt;
+
+&lt;p&gt;目前 go-wechaty examples/ding-dong-bot.go 有一个 ding-dong bot, 但是我们希望这个 ding-dong 是通用的，如果我们的 Plugin 体系能编写出来，也许实现 ding-dong 就只需要一行代码。例如：go bot.Use(DingDong{}) go-wechaty 是 Go 语言实现 wechaty 的项目，同样支持多协议接入；同时借助 gorountine 和 channel 的语言特性，实现了更加合理的封装和设计。&lt;/p&gt;
+
+&lt;h3 id=&quot;心得体会-5&quot;&gt;心得体会&lt;/h3&gt;
+
+&lt;p&gt;我在大学的前两年时间里并没有参与过大项目的开发，更别提要求较高的开源项目。开源项目的远程协作开发对我来说有极大吸引力，但我一直没有一个合适的机会参与其中（水平不足、不知道如何参与等情况让我屡次放弃跨出第一步）。&lt;/p&gt;
+
+&lt;p&gt;本届开源软件供应链点亮计划正好提供了这次机会，让我参与到 Wechaty 社区中进行项目开发。Wechaty 社区是一个包容度很高的社区，社区内的导师们对学生提出的问题都会耐心解答。&lt;/p&gt;
+
+&lt;p&gt;这次活动的经历增加了我参与开源软件开发的经验，同时争强了我的沟通交流能力。在以后的开发历程中，我会为继续为开源社区贡献代码。&lt;/p&gt;
+
+&lt;p&gt;在本项目的开发过程中，我遇到的主要问题来自对 Go 程序开发的不熟悉，在许多细节上会产生疑惑。实际测试程序时，也有一些小问题需要解决，比如 Docker 的使用、排错。我的解决方案主要是自己学习、查阅资料。这次项目开发的经历大大提升了我的编程能力，以及一些计算机相关知识。&lt;/p&gt;
+
+&lt;p&gt;对于部分无法自己解决的问题，社区里的导师们给了我很大帮助，导师们在阅读我的代码后给出了许多具有针对性的建议，这对我完成项目的开发是十分必要的，感谢导师们的付出。&lt;/p&gt;
+
+&lt;h3 id=&quot;导师点评&quot;&gt;导师点评&lt;/h3&gt;
+
+&lt;p&gt;昊翰同学的学习能力，和能动性特别强，能够很快的上手新的知识和方法；从最初的对开源项目的无从下手，到熟悉常规的共享代码的方式，以及对 Go 的掌握，都能感受到进步和收获；相信这么一次短暂的活动经历，能在你今后的工作和生活中成为谈资。&lt;/p&gt;
+
+&lt;p&gt;相信大部分从学校过渡到工作中，都会对长周期的项目产生动摇，其实你只需要按照原计划去完成既定工作就好，大项目拆解成小项目是计划和执行中很重要的部分；报告中提到了周计划，很欣慰你看到了这点带给你的价值，他使你没有偏离原有计划的方向，也希望你今后的工作中能从此有所收获。&lt;/p&gt;
+
+&lt;h2 id=&quot;项目-9---go-wechaty-github-action-optimization&quot;&gt;项目 9 - Go-wechaty Github Action optimization&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;学生：唐光彬，华南农业大学（大二）&lt;/li&gt;
+  &lt;li&gt;导师：丁小雨&lt;/li&gt;
+  &lt;li&gt;Issue: &lt;a href=&quot;https://github.com/wechaty/summer-of-code/issues/8&quot;&gt;https://github.com/wechaty/summer-of-code/issues/8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Git: &lt;a href=&quot;https://github.com/wechaty/go-wechaty&quot;&gt;https://github.com/wechaty/go-wechaty&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Blog: &lt;a href=&quot;https://wechaty.js.org/2020/09/27/go-wechaty-gh-actions-optimization-final-poc/&quot;&gt;https://wechaty.js.org/2020/09/27/go-wechaty-gh-actions-optimization-final-poc/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;项目描述-8&quot;&gt;项目描述&lt;/h3&gt;
+
+&lt;p&gt;Github Action 已经发布有段时间了，在 go-wechaty 的 单元测试，代码检测和代码评级均有已有所落地。&lt;/p&gt;
+
+&lt;p&gt;Go-wechaty Github Action optimization 主要通过使用 Github Actions 的特性实现跨仓库的 CI 优化，旨在为开发者减轻负担。&lt;/p&gt;
+
+&lt;h3 id=&quot;心得体会-6&quot;&gt;心得体会&lt;/h3&gt;
+
+&lt;p&gt;作为一个对项目开发来说都没多少经验的小白，第一次为开源项目出一份微薄的力。在这三个月里，陆陆续续学习了 Github Actions 和 Docker 有关的知识。特别感谢导师丁小雨的付出，在他的指导下我也感受到开源社区的温暖和力量。&lt;/p&gt;
+
+&lt;p&gt;尽管这次开发的代码量比较少，我从中收获的是开源项目协作的流程以及开源社区的互助共享精神，收获颇丰。这一次规范又专业的多人协作，让我体验了一把充满效率的开发之旅。这次活动也让我了解到许多优秀的开发者，让我愈发决心磨练自己的开发技术。&lt;/p&gt;
+
+&lt;p&gt;最后，再一次感谢开源软件供应链点亮计划系列活动、Wechaty社区给我这次机会，也十分感谢丁小雨老师和其他老师、同伴给我带来的指导和帮助。&lt;/p&gt;
+
+&lt;h3 id=&quot;导师点评-1&quot;&gt;导师点评&lt;/h3&gt;
+
+&lt;p&gt;光彬同学能够很好的主动扩充自己尚未掌握的知识领域，甚至于在一定方向上能够主动的去探索新的技术方案，这一点在工作中是很重要的技能，希望你能够不段的扩充自己的知识领域，能够解决更多未知的问题。&lt;/p&gt;
+
+&lt;p&gt;技术方面相信你有足够的积极性去解决，就像你在总结中提到的你会意识到自己技术上的提升空间，但是另一方面希望你能够在开源方面有更多的收获，它可以使你在今后的工作中能够推动更多项目协同上的改进。&lt;/p&gt;
+
+&lt;h2 id=&quot;to-be-continued&quot;&gt;To Be Continued&lt;/h2&gt;
+
+&lt;p&gt;这次的活动对同学和对导师来说都是意义非凡的，不管同学们未来是否继续为 Wechaty 社区贡献，希望这次的活动能为他们成为职业程序员铺路与点亮他们对开源的热情。&lt;/p&gt;
+
+&lt;p&gt;星星之火，可以燎原。夏天或许过去了，但你与 Wechaty 社区的故事仍未完待续，&lt;/p&gt;
+
+&lt;p&gt;欢迎每个希望为 Wechaty 项目贡献的伙伴们加入我们，与我们谱写更多的故事！&lt;/p&gt;
+
+&lt;p&gt;你可以从这里开始：&lt;a href=&quot;https://github.com/wechaty/wechaty/issues&quot;&gt;https://github.com/wechaty/wechaty/issues&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;欢迎加入-wechaty-社区&quot;&gt;欢迎加入 Wechaty 社区&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;地址&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;入口&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://github.com/wechaty/wechaty&quot;&gt;https://github.com/wechaty/wechaty&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;源码&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://wechaty.js.org&quot;&gt;https://wechaty.js.org&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;官网&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://gitter.im/wechaty/wechaty&quot;&gt;https://gitter.im/wechaty/wechaty&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Gitter 聊天室&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://wechaty.js.org/blog&quot;&gt;https://wechaty.js.org/blog&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;博客&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PL8hd9KDTdarDXf_Rxtr8meKhxtgcXMInh&quot;&gt;https://www.youtube.com/playlist…&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;YouTube&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://photos.google.com/share/AF1QipOWKUfUkjw-VzE0skrjmCwbwIWwuBiI7Li4UCbdXH62n8iH2ITnvDbPTsx4eBl8dw?key=cy1NdWFoUGpXanVmczVHSm84TVg1LXJWeW5HTDhR&quot;&gt;https://photos.google.com/…&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Album&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1fVCk8qRYc4RKGMf2UY5HOe07hEhPUOpGC34v88GEFJg/edit#heading=h.64c95c3y2l4v&quot;&gt;https://docs.google.com/document/…&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Meeting Notes&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Special thanks to Milvus community for the &lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzUzMDI5OTA5NQ==&amp;amp;mid=2247486935&amp;amp;idx=2&amp;amp;sn=07bbbc323872d5ef3a48e3096e2c6f02&quot;&gt;template&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>huan</name></author><category term="announcement" /><category term="news" /><category term="soc2020" /><category term="soc" /><summary type="html">今夏， Wechaty 社区诞生了 9 位后浪贡献者：毕凯乔、王俊伟、谢昱清、范蕊、江姗姗、林昊翰、唐光彬、肖梓霖与孔祥哲。他们都还是正在就读本科与研究所的学生。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://wechaty.js.org/assets/2020/12-summer-2020-student-developers/award.png" /><media:content medium="image" url="https://wechaty.js.org/assets/2020/12-summer-2020-student-developers/award.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">2020 Wechaty 666: 6 lines of code, 6 platforms, and 6 languages</title><link href="https://wechaty.js.org/2020/12/30/wechaty-2020-dinner-666/" rel="alternate" type="text/html" title="2020 Wechaty 666: 6 lines of code, 6 platforms, and 6 languages" /><published>2020-12-30T00:00:00+00:00</published><updated>2020-12-30T00:00:00+00:00</updated><id>https://wechaty.js.org/2020/12/30/wechaty-2020-dinner-666</id><content type="html" xml:base="https://wechaty.js.org/2020/12/30/wechaty-2020-dinner-666/">&lt;p&gt;Time past fast, the year 2020 has gone.&lt;/p&gt;
+
+&lt;p&gt;When we look back to the past 12 months, we are very happy to see that the Wechaty community growth HUGE, thanks for all our great developers from the community, especially those who have submited Issues and Pull Requests!&lt;/p&gt;
+
+&lt;h2 id=&quot;meetup-video&quot;&gt;Meetup Video&lt;/h2&gt;
+
+&lt;p&gt;Dec 30, 2020, we have a Wechaty developers meetup dinner at Wudaokou. we have reviewed the 2020 and outlook the 2021 for our great Wechaty open-source project and the community!&lt;/p&gt;
+
+&lt;!-- https://wechaty.js.org/2020/08/24/add-video-to-wechaty-blog/ --&gt;
+
+&lt;div style=&quot;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top:30px;
+    height:0;
+    overflow:hidden;
+&quot;&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/a9i5YoKiRYY&quot; allowfullscreen=&quot;&quot; webkitallowfullscreen=&quot;&quot; frameborder=&quot;0&quot; style=&quot;
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+    &quot;&gt;
+&lt;/iframe&gt;
+
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;YouTube: &lt;a href=&quot;https://youtu.be/a9i5YoKiRYY&quot;&gt;https://youtu.be/a9i5YoKiRYY&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The following friends attended our dinner:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Huan, Creator of Wechaty, Chatbot TVP of Tencent, PreAngel Partner&lt;/li&gt;
+  &lt;li&gt;李佳芮, Co-creator of Wechaty, Microsoft AI MVP, Founder &amp;amp; CEO of Juzi.BOT&lt;/li&gt;
+  &lt;li&gt;吴京京, Creator of Python Wechaty, NLP ML Postgraduate student of BUPT&lt;/li&gt;
+  &lt;li&gt;丁小雨, Creator of Go Wechaty, Engineer&lt;/li&gt;
+  &lt;li&gt;借来的天堂, Python Wechaty Contributor&lt;/li&gt;
+  &lt;li&gt;谢扬, Wechaty Contributor, Founder &amp;amp; CEO of Authing.cn&lt;/li&gt;
+  &lt;li&gt;尹伯昊, Wechaty Contributor, CMO of Juzi.BOT&lt;/li&gt;
+  &lt;li&gt;王海良, Wechaty Contributor, Founder &amp;amp; CEO of Chatopera.com&lt;/li&gt;
+  &lt;li&gt;theif, MIT Ph.D, Machine Learning Researcher, Entrepreneur&lt;/li&gt;
+  &lt;li&gt;孙翰南, Wechaty Developer, Founder &amp;amp; CEO of Fami&lt;/li&gt;
+  &lt;li&gt;A Xiao, Wechaty Developer (online)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/12-wechaty-2020-dinner-666/group-photo.jpg&quot; alt=&quot;Wechaty Developers Dinner&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Thanks &lt;a href=&quot;https://github.com/windmemory&quot;&gt;@windmemory&lt;/a&gt; supporting for the final cutting pro software, and here’s a good 20 mins tutorial for getting started with it: &lt;a href=&quot;https://www.youtube.com/watch?v=ygBlgaT78mM&quot;&gt;LEARN FINAL CUT PRO X IN 20 MINUTES // TUTORIAL FOR BEGINNERS&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;2020-review&quot;&gt;2020 Review&lt;/h2&gt;
+
+&lt;p&gt;We have summurized what we did those fantastic improvements in 2020 into one number: 666!&lt;/p&gt;
+
+&lt;p&gt;Why 666? It’s because we have got three sixes!&lt;/p&gt;
+
+&lt;h3 id=&quot;6-lines-of-code&quot;&gt;6 Lines of Code&lt;/h3&gt;
+
+&lt;p&gt;Firstly, as we all know, Wechaty can build a chatbot with only 6 lines of JavaScript/TypeScript code!&lt;/p&gt;
+
+&lt;p&gt;And after 2020, we can not only write Wechaty chatbots in JavaScript/TypeScript, but also write them in almost any languages that you are using, for example, Python!&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;bot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;bot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'scan'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qrcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Scan QR Code to login: {}&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;https://wechaty.js.org/qrcode/{}'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qrcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;bot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'login'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'User {} logged in'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;bot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'message'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Message: {}'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The World’s Shortest ChatBot Code: 6 lines of JavaScript&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;6-programming-languages&quot;&gt;6 Programming Languages&lt;/h3&gt;
+
+&lt;p&gt;Secondly, Wechaty can be used in 6 programming languages other than JavaScript/TypeScript, they are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/python-wechaty&quot;&gt;Python Wechaty&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/go-wechaty&quot;&gt;Go Wechaty&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/java-wechaty&quot;&gt;Java Wechaty&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/scala-wechaty&quot;&gt;Scala Wechaty&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/php-wechaty&quot;&gt;PHP Wechaty&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/dotnet-wechaty&quot;&gt;.NET Wechaty&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We drafted the &lt;a href=&quot;https://github.com/wechaty/wechaty/discussions/1927&quot;&gt;Multi-language Wechaty Issue #1927&lt;/a&gt; in March 2020, and our Wechaty community members are so great that we finished translate Wechaty from TypeScript to Python, Go, and Java in 2 months, and then we got another three (Scala, PHP, .NET) done in the next 3 months, it’s so unbelievable!&lt;/p&gt;
+
+&lt;p&gt;And after 2020, we can not only connect Wechaty to WeChat, but also connect our chatbot to more IM platforms!&lt;/p&gt;
+
+&lt;h3 id=&quot;6-im-platforms&quot;&gt;6 IM Platforms&lt;/h3&gt;
+
+&lt;p&gt;Thirdly, Wechaty can connecting to 6 IM platforms other than WeChat, they are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/wechaty-puppet-whatsapp&quot;&gt;Whatsapp&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wechaty.js.org/2020/10/13/wechaty-puppet-douyin-final-term/&quot;&gt;TikTok&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wechaty.js.org/2020/09/30/wechaty-puppet-lark-final-blog/&quot;&gt;Lark&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wechaty.js.org/2020/10/13/wechaty-puppet-kuaishou-final-term/&quot;&gt;Kuaishou&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wechaty/wechaty-puppet-gitter&quot;&gt;Gitter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/juzibot/wxwork-tester&quot;&gt;WxWork&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Most of those support (Whatsapp, TikTok, Lark, Kuaishou) are built by community developers who comes from the &lt;a href=&quot;https://isrc.iscas.ac.cn/summer2020/&quot;&gt;Open Source Promotion Plan - Summer 2020&lt;/a&gt;. Summer 2020 is a Google Summer of Code like program co-organized by ISCAS &amp;amp; openEuler Community. Wechaty was recognized by the organizer as a valuable open-source project, we published a dozen oss tasks to student develoeprs who want to practice with the oss, and they are so great that everyone did a great job with us!&lt;/p&gt;
+
+&lt;p&gt;And after 2020, we can not only use Wechaty Puppet locally, but also we can cloudify the &lt;a href=&quot;https://wechaty.js.org/2021-01-02-wechaty-puppet-service&quot;&gt;Wechaty Pupppet as a Service (TBW)&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;So, 2020 Wechaty 666!&lt;/p&gt;
+
+&lt;h2 id=&quot;2021-outlook&quot;&gt;2021 Outlook&lt;/h2&gt;
+
+&lt;p&gt;For the coming 2021, we have a great conversation with all the friends at our dinner.&lt;/p&gt;
+
+&lt;p&gt;There will be more and more opptunities for Wechaty in 2021, we have picked four out of them which we believe they are the most important ones.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Globalization: Google Summer of Code&lt;/li&gt;
+  &lt;li&gt;Book: Chatbot 1 to 2&lt;/li&gt;
+  &lt;li&gt;More Puppet Service Providers&lt;/li&gt;
+  &lt;li&gt;Five Years Celebration&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;1-globalization&quot;&gt;1. Globalization&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://summerofcode.withgoogle.com/&quot;&gt;Google Summer of Code&lt;/a&gt; 2021 will start soon, Wechaty should apply to join as a open-source organization, then connect to the global student developers through the GSoC in 2021. (We should also join Summer 2021 in China as well)&lt;/li&gt;
+  &lt;li&gt;The Open Source Fundation is a great place to hold our Wechaty oss project. We should keep eyes on the top tier fundations and learn how to play with them. E.g., it would be very helpful for us if we can join Apache or Linux fundation.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;2-book--documentation&quot;&gt;2. Book &amp;amp; Documentation&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The &lt;a href=&quot;https://wechaty.js.org/docs/&quot;&gt;Wechaty Docs Website&lt;/a&gt; is not clear for our developers, especially a developers never know Wechaty before. We should fill the contents in our docs in 2021.&lt;/li&gt;
+  &lt;li&gt;We have a plan to write a book (code name &lt;a href=&quot;https://wechaty.js.org/docs/chatbot-1-to-2/&quot;&gt;Chatbot 1 to 2&lt;/a&gt;) online, the target audience is a programmer who want to build a chatbot to solve their conversational user interface problem but has never heard about Wechaty,
+to getting started with Wechaty and write good chatbot code.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;3-more-puppet-service-providers&quot;&gt;3. More Puppet Service Providers&lt;/h3&gt;
+
+&lt;p&gt;Currently we have only four &lt;a href=&quot;https://wechaty.js.org/docs/puppet-services&quot;&gt;Wechaty Puppet Service Providers&lt;/a&gt;, and we should find more developers who is willing and able to build and provide the Wechaty Puppet Service. (at least increase another four providers)&lt;/p&gt;
+
+&lt;h3 id=&quot;4-five-years-celebration&quot;&gt;4. Five Years Celebration&lt;/h3&gt;
+
+&lt;p&gt;We have already &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1XcDoIczyIclqXP1p90Sz7S0n4Q22xjFzJmjPFlU2g1E/edit&quot;&gt;150 contributors&lt;/a&gt; with Wechaty open-source project!&lt;/p&gt;
+
+&lt;p&gt;However, most of us are never meet in person before, so let’s meet in 2021!&lt;/p&gt;
+
+&lt;p&gt;Our plan is to host a 5 Years Celebration in March 2021, please let us know what you think by discussing at &lt;a href=&quot;https://github.com/wechaty/wechaty/discussions/categories/5-years-celebration&quot;&gt;https://github.com/wechaty/wechaty/discussions/categories/5-years-celebration&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;gifts&quot;&gt;Gifts&lt;/h2&gt;
+
+&lt;p&gt;All the friends got beautiful Wechaty stickers! If you like them, please stay tuned and we will send out a form to fill your address and then we will send stickers to you!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/12-wechaty-2020-dinner-666/stickers.jpg&quot; alt=&quot;Wechaty Stickers&quot; /&gt;&lt;/p&gt;</content><author><name>huan</name></author><category term="event" /><category term="666" /><category term="2020" /><category term="dinner" /><category term="news" /><summary type="html">Time past fast, the year 2020 has gone.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://wechaty.js.org/assets/2020/12-wechaty-2020-dinner-666/splash.jpg" /><media:content medium="image" url="https://wechaty.js.org/assets/2020/12-wechaty-2020-dinner-666/splash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">java-wechaty auto get news</title><link href="https://wechaty.js.org/2020/12/28/auto-push-news/" rel="alternate" type="text/html" title="java-wechaty auto get news" /><published>2020-12-28T00:00:00+00:00</published><updated>2020-12-28T00:00:00+00:00</updated><id>https://wechaty.js.org/2020/12/28/auto-push-news</id><content type="html" xml:base="https://wechaty.js.org/2020/12/28/auto-push-news/">&lt;p&gt;In daily life, most people always want to know latest news. This tutorial will record how to automatically get the current latest news.&lt;/p&gt;
+
+&lt;h2 id=&quot;project-structure&quot;&gt;Project structure&lt;/h2&gt;
+
+&lt;h3 id=&quot;technology-selection&quot;&gt;Technology selection&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kotlin&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;java-wechaty&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Spring boot&lt;/code&gt;
+IDE: IntelliJ IDEA&lt;/p&gt;
+
+&lt;h3 id=&quot;core-modules&quot;&gt;Core Modules&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Wechaty(WeChat push)&lt;/li&gt;
+  &lt;li&gt;Timing task&lt;/li&gt;
+  &lt;li&gt;Information acquisition&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;start&quot;&gt;Start&lt;/h2&gt;
+
+&lt;h3 id=&quot;init-project&quot;&gt;Init project&lt;/h3&gt;
+
+&lt;p&gt;Visit &lt;a href=&quot;https://start.spring.io/&quot;&gt;Spring initializr&lt;/a&gt; and generate:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/harrisonqi/2020-12-28-auto-push-news-01.png&quot; alt=&quot;Spring initializr&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Download &amp;amp; unzip, open with IDEA:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/harrisonqi/2020-12-28-auto-push-news-02.png&quot; alt=&quot;open with IDEA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Add dependency(newest version) and update:&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.github.wechaty&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;wechaty&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;0.1.5-SNAPSHOT&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/harrisonqi/2020-12-28-auto-push-news-03.png&quot; alt=&quot;dependency&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;add-wechaty-scan-plugin&quot;&gt;Add wechaty scan plugin&lt;/h3&gt;
+
+&lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WechatyPlugins.kt&lt;/code&gt; file in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com.example.demo&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.bugcatt.wxbot.wechaty.plugins&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.github.wechaty.MessageListener&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.github.wechaty.ScanListener&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.github.wechaty.Wechaty&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.github.wechaty.WechatyPlugin&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.github.wechaty.schemas.MessageType&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.github.wechaty.schemas.ScanStatus&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.github.wechaty.user.Message&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.github.wechaty.utils.QrcodeUtils&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;typealias&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DingDongOptions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DingDongOptionsObject&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DingDongOptionsObject&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;dm&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;room&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isMatchOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DingDongOptionsObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Boolean&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;localOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DingDongOptionsObject&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DingDongOptionsObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;room&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;mentionSelf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dm&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;WechatyPlugins&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;companion&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nd&quot;&gt;@JvmStatic&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;DingDongPlugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DingDongOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?):&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;WechatyPlugin&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;onMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MessageListener&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MessageType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+                        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;room&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+                        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;room&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                            &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;mentionText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                            &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+                        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;isMatchOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+                        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#ding&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+                        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;room&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                            &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;say&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dong&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                            &lt;span class=&quot;n&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;say&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dong&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+
+                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;nd&quot;&gt;@JvmStatic&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ScanPlugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;WechatyPlugin&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;onScan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ScanListener&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qrcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statusScanStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ScanStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;QrcodeUtils&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getQr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qrcode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Screenshot:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/harrisonqi/2020-12-28-auto-push-news-04.png&quot; alt=&quot;dependency&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;autowire-wechaty&quot;&gt;Autowire wechaty&lt;/h3&gt;
+
+&lt;p&gt;Change DemoApplication.kt to:&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.example.demo&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.github.wechaty.Wechaty&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.boot.autoconfigure.SpringBootApplication&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.boot.runApplication&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.context.annotation.Bean&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@SpringBootApplication&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DemoApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Bean&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;wechatyToken&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;your wechaty token&quot;&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;bot&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wechatyToken&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;bot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;WechatyPlugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ScanPlugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;bot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bot&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;runApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;DemoApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;(*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/harrisonqi/2020-12-28-auto-push-news-05.png&quot; alt=&quot;dependency&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then run the application, you’ll see log of wechaty.&lt;/p&gt;
+
+&lt;h3 id=&quot;create-schedule&quot;&gt;Create schedule&lt;/h3&gt;
+
+&lt;h4 id=&quot;enable-scheduling&quot;&gt;Enable scheduling&lt;/h4&gt;
+
+&lt;p&gt;First we need enable schedule:
+Add a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@EnableScheduling&lt;/code&gt; to application:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/harrisonqi/2020-12-28-auto-push-news-08.png&quot; alt=&quot;EnableScheduling&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We need schedule of spring boot, so we create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MySchedule.kt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/harrisonqi/2020-12-28-auto-push-news-06.png&quot; alt=&quot;MySchedule&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;inject-wechaty&quot;&gt;Inject wechaty&lt;/h4&gt;
+
+&lt;p&gt;We wanna use functions of wechaty. Because the injection has been completed above, we only need to directly introduce here:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/harrisonqi/2020-12-28-auto-push-news-07.png&quot; alt=&quot;Inject wechaty&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;create-a-schedule-task&quot;&gt;Create a schedule task&lt;/h4&gt;
+
+&lt;p&gt;Let’s create a schedule for test. Print time every 5 second. Replace your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MySchedule.kt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.example.demo&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.github.wechaty.Wechaty&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.scheduling.annotation.Scheduled&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.stereotype.Component&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.time.LocalDateTime&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MySchedule&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Scheduled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fixedDelay&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;autoSuggest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;time: ${LocalDateTime.now()}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Run application, you can see time print on your console:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/harrisonqi/2020-12-28-auto-push-news-09.png&quot; alt=&quot;Inject wechaty&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, we only need to focus on how to push and content.&lt;/p&gt;
+
+&lt;h3 id=&quot;free-news-api&quot;&gt;Free news api&lt;/h3&gt;
+
+&lt;h4 id=&quot;resttemplate&quot;&gt;RestTemplate&lt;/h4&gt;
+
+&lt;p&gt;Because we need &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RestTemplate&lt;/code&gt; to send http request, so we add a dependency into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-web&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/harrisonqi/2020-12-28-auto-push-news-10.png&quot; alt=&quot;RestTemplate&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Don’t forget to reimport.&lt;/p&gt;
+
+&lt;h4 id=&quot;news-api&quot;&gt;News Api&lt;/h4&gt;
+
+&lt;p&gt;There’s a free news &lt;a href=&quot;https://www.juhe.cn/docs/api/id/235&quot;&gt;Api&lt;/a&gt;. Let’s use it.&lt;/p&gt;
+
+&lt;p&gt;First, we create a data class to receive json data. Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ToutiaoResponse.kt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.example.demo&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.fasterxml.jackson.annotation.JsonProperty&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;data class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ToutiaoResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;nd&quot;&gt;@JsonProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;reason&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;reason&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nd&quot;&gt;@JsonProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;result&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;data class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;nd&quot;&gt;@JsonProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;`data`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nd&quot;&gt;@JsonProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stat&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;stat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;data class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;nd&quot;&gt;@JsonProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;author_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;authorName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nd&quot;&gt;@JsonProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;category&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nd&quot;&gt;@JsonProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;date&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nd&quot;&gt;@JsonProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;thumbnail_pic_s&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;thumbnailPicS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nd&quot;&gt;@JsonProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;thumbnail_pic_s02&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;thumbnailPicS02&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nd&quot;&gt;@JsonProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;thumbnail_pic_s03&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;thumbnailPicS03&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nd&quot;&gt;@JsonProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nd&quot;&gt;@JsonProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;uniquekey&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;uniquekey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nd&quot;&gt;@JsonProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NewsUtil.kt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.example.demo&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.web.client.RestTemplate&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.web.client.getForObject&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;NewsUtil&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getNews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ToutiaoResponse&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;top&quot;&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;appKey&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;http://v.juhe.cn/toutiao/index?type=$type&amp;amp;key=$appKey&quot;&lt;/span&gt;
+
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;restTemplate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RestTemplate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restTemplate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getForObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ToutiaoResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;javaClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, we just use this function in our schedule:&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.example.demo&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.github.wechaty.Wechaty&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.scheduling.annotation.Scheduled&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.stereotype.Component&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MySchedule&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Scheduled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fixedDelay&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;600000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;autoSuggest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;newsResponse&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;NewsUtil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getNews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;newsList&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newsResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;wechaty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;say&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Latest news: ${newsList[i].title}&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
+                    &lt;span class=&quot;s&quot;&gt;&quot;\n${newsList[i].url}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ok, here’s the very simple news auto push plugin. You can use your imagination to create more useful plugins!&lt;/p&gt;
+
+&lt;p&gt;You can find code &lt;a href=&quot;https://github.com/harrison-pioneer/wechaty_auto_news&quot;&gt;here&lt;/a&gt;&lt;/p&gt;</content><author><name>harrisonqi</name></author><category term="tutorial" /><category term="java" /><summary type="html">In daily life, most people always want to know latest news. This tutorial will record how to automatically get the current latest news.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://wechaty.js.org/assets/2020/harrisonqi/2020-12-28-auto-push-news-banner.jpg" /><media:content medium="image" url="https://wechaty.js.org/assets/2020/harrisonqi/2020-12-28-auto-push-news-banner.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
